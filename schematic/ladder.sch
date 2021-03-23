@@ -102,35 +102,38 @@ N 930 520 930 550 { lab=vn}
 N 1230 520 1230 550 { lab=vn}
 N 1530 520 1530 550 { lab=vn}
 N 1830 520 1830 550 { lab=vn}
-N -10 390 0 390 { lab=#net22}
-N -10 390 -10 490 { lab=#net22}
-N -10 490 0 490 { lab=#net22}
-N 290 390 300 390 { lab=#net23}
-N 290 390 290 490 { lab=#net23}
-N 290 490 300 490 { lab=#net23}
-N 590 390 600 390 { lab=#net24}
-N 590 390 590 490 { lab=#net24}
-N 590 490 600 490 { lab=#net24}
-N 890 390 900 390 { lab=#net25}
-N 890 390 890 490 { lab=#net25}
-N 890 490 900 490 { lab=#net25}
-N 1190 390 1200 390 { lab=#net26}
-N 1190 390 1190 490 { lab=#net26}
-N 1190 490 1200 490 { lab=#net26}
-N 1490 390 1500 390 { lab=#net27}
-N 1490 390 1490 490 { lab=#net27}
-N 1490 490 1500 490 { lab=#net27}
-N 1790 390 1800 390 { lab=#net28}
-N 1790 390 1790 490 { lab=#net28}
-N 1790 490 1800 490 { lab=#net28}
-N -30 440 -10 440 { lab=#net22}
-N -30 440 -10 440 { lab=#net22}
-N 270 440 290 440 { lab=#net23}
-N 570 440 590 440 { lab=#net24}
-N 870 440 890 440 { lab=#net25}
-N 1170 440 1190 440 { lab=#net26}
-N 1470 440 1490 440 { lab=#net27}
-N 1770 440 1790 440 { lab=#net28}
+N -10 390 0 390 { lab=d6}
+N -10 390 -10 490 { lab=d6}
+N -10 490 0 490 { lab=d6}
+N 290 390 300 390 { lab=d5}
+N 290 390 290 490 { lab=d5}
+N 290 490 300 490 { lab=d5}
+N 590 390 600 390 { lab=d4}
+N 590 390 590 490 { lab=d4}
+N 590 490 600 490 { lab=d4}
+N 890 390 900 390 { lab=d3}
+N 890 390 890 490 { lab=d3}
+N 890 490 900 490 { lab=d3}
+N 1190 390 1200 390 { lab=d2}
+N 1190 390 1190 490 { lab=d2}
+N 1190 490 1200 490 { lab=d2}
+N 1490 390 1500 390 { lab=d1}
+N 1490 390 1490 490 { lab=d1}
+N 1490 490 1500 490 { lab=d1}
+N 1790 390 1800 390 { lab=d0}
+N 1790 390 1790 490 { lab=d0}
+N 1790 490 1800 490 { lab=d0}
+N -30 440 -10 440 { lab=d6}
+N -30 440 -10 440 { lab=d6}
+N 270 440 290 440 { lab=d5}
+N 570 440 590 440 { lab=d4}
+N 870 440 890 440 { lab=d3}
+N 1170 440 1190 440 { lab=d2}
+N 1470 440 1490 440 { lab=d1}
+N 1770 440 1790 440 { lab=d0}
+N -50 30 2030 30 { lab=iin}
+N 2030 30 2030 80 { lab=iin}
+N 2030 80 2070 80 { lab=iin}
 C {madvlsi/nmos3.sym} 0 30 0 0 {name=M1
 L=0.15
 W=1
@@ -161,7 +164,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 150 0 1 0 {name=M3
+C {madvlsi/nmos3.sym} 150 0 3 0 {name=M3
 L=0.15
 W=1
 body=GND
@@ -221,7 +224,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 450 0 1 0 {name=M7
+C {madvlsi/nmos3.sym} 450 0 3 0 {name=M7
 L=0.15
 W=1
 body=GND
@@ -281,7 +284,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 750 0 1 0 {name=M11
+C {madvlsi/nmos3.sym} 750 0 3 0 {name=M11
 L=0.15
 W=1
 body=GND
@@ -341,7 +344,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 1050 0 1 0 {name=M15
+C {madvlsi/nmos3.sym} 1050 0 3 0 {name=M15
 L=0.15
 W=1
 body=GND
@@ -401,7 +404,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 1350 0 1 0 {name=M19
+C {madvlsi/nmos3.sym} 1350 0 3 0 {name=M19
 L=0.15
 W=1
 body=GND
@@ -461,7 +464,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 1650 0 1 0 {name=M23
+C {madvlsi/nmos3.sym} 1650 0 3 0 {name=M23
 L=0.15
 W=1
 body=GND
@@ -521,7 +524,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 1950 0 1 0 {name=M27
+C {madvlsi/nmos3.sym} 1950 0 3 0 {name=M27
 L=0.15
 W=1
 body=GND
@@ -551,7 +554,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 2100 80 2 0 {name=M29
+C {madvlsi/nmos3.sym} 2100 80 0 0 {name=M29
 L=0.15
 W=1
 body=GND
@@ -795,3 +798,4 @@ C {devices/ipin.sym} 870 440 0 0 {name=p11 lab=d3}
 C {devices/ipin.sym} 1170 440 0 0 {name=p13 lab=d2}
 C {devices/ipin.sym} 1470 440 0 0 {name=p15 lab=d1}
 C {devices/ipin.sym} 1770 440 0 0 {name=p17 lab=d0}
+C {devices/ipin.sym} -50 30 0 0 {name=p20 lab=vg}
