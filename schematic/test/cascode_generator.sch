@@ -19,8 +19,8 @@ N 240 -220 280 -220 { lab=Vcp}
 N 240 -240 240 -220 { lab=Vcp}
 N 240 -220 240 -140 { lab=Vcp}
 N 120 -220 120 -140 { lab=#net2}
-N 120 -450 120 -400 { lab=Vp}
-N 0 -720 540 -720 { lab=Vp}
+N 120 -450 120 -400 { lab=VDD}
+N 0 -720 540 -720 { lab=VDD}
 N 370 -250 390 -250 { lab=#net3}
 N 370 -250 370 -110 { lab=#net3}
 N 370 -110 390 -110 { lab=#net3}
@@ -36,31 +36,41 @@ N 540 -220 540 -170 { lab=#net4}
 N 420 -170 540 -170 { lab=#net4}
 N 420 -170 420 -140 { lab=#net4}
 N 420 -220 420 -170 { lab=#net4}
-N 420 -80 420 -40 { lab=Vn}
-N 0 280 10 280 { lab=Vn}
+N 420 -80 420 -40 { lab=GND}
+N 0 280 10 280 { lab=GND}
 N 280 -270 290 -270 { lab=Vcp}
 N 590 -250 610 -250 { lab=Vcn}
 N 120 -80 120 -60 { lab=#net5}
 N 120 0 120 20 { lab=#net6}
 N 120 80 120 100 { lab=#net7}
 N 120 160 120 180 { lab=#net8}
-N 90 -110 90 210 { lab=#net9}
-N 10 280 120 280 { lab=Vn}
-N 120 280 240 280 { lab=Vn}
-N 450 -690 450 -370 { lab=Vbp}
-N 420 -420 420 -400 { lab=#net10}
-N 420 -500 420 -480 { lab=#net11}
-N 420 -580 420 -560 { lab=#net12}
-N 420 -660 420 -640 { lab=#net13}
-N 420 -40 420 280 { lab=Vn}
-N 240 280 420 280 { lab=Vn}
-N 120 -720 120 -450 { lab=Vp}
+N 90 -110 90 210 { lab=Vbn}
+N 10 280 120 280 { lab=GND}
+N 120 280 240 280 { lab=GND}
+N 420 -420 420 -400 { lab=#net9}
+N 420 -500 420 -480 { lab=#net10}
+N 420 -580 420 -560 { lab=#net11}
+N 420 -660 420 -640 { lab=#net12}
+N 420 -40 420 280 { lab=GND}
+N 240 280 420 280 { lab=GND}
+N 120 -720 120 -450 { lab=VDD}
 N 0 -110 210 -110 { lab=Vbn}
-N 240 240 240 280 { lab=Vn}
-N 540 -720 540 -400 { lab=Vp}
+N 240 240 240 280 { lab=GND}
+N 540 -720 540 -400 { lab=VDD}
 N 350 -370 510 -370 { lab=Vbp}
-N 120 240 120 280 {}
-N 240 -80 240 240 {}
+N 120 240 120 280 { lab=GND}
+N 240 -80 240 240 { lab=GND}
+N -310 -390 -310 -370 { lab=VDD}
+N -310 -310 -310 -260 { lab=GND}
+N -200 -590 -80 -590 { lab=GND}
+N -200 -550 -160 -550 { lab=Vbn}
+N -170 -550 -170 -110 { lab=Vbn}
+N -170 -110 -0 -110 { lab=Vbn}
+N -200 -570 -130 -570 { lab=Vbp}
+N -150 -570 -150 -420 { lab=Vbp}
+N -150 -420 360 -420 { lab=Vbp}
+N 360 -420 360 -370 { lab=Vbp}
+N 450 -690 450 -370 { lab=Vbp}
 C {madvlsi/nmos3.sym} 120 -110 0 0 {name=M1
 L=l
 W=w
@@ -111,7 +121,7 @@ L=l
 W=w
 body=VDD
 nf=1
-mult=m*4
+mult=M
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -141,7 +151,7 @@ L=l
 W=w
 body=GND
 nf=1
-mult=m*4
+mult=M
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -171,7 +181,7 @@ L=l
 W=w
 body=VDD
 nf=1
-mult=1
+mult=m
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -211,16 +221,13 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/ipin.sym} 350 -370 0 0 {name=p1 lab=Vbp}
-C {devices/ipin.sym} 0 -110 0 0 {name=p2 lab=Vbn}
-C {devices/iopin.sym} 0 280 2 0 {name=p3 lab=Vn}
-C {devices/iopin.sym} 0 -720 2 0 {name=p4 lab=Vp}
-C {devices/opin.sym} 290 -270 0 0 {name=p5 lab=Vcp}
-C {devices/opin.sym} 610 -250 0 0 {name=p6 lab=Vcn}
-C {devices/code_shown.sym} 660 -440 0 0 {name=s1 only_toplevel=false value="
+C {devices/code_shown.sym} 660 -440 0 0 {name=SPICE only_toplevel=false value="
 .param w=5
 .param l=2
 .param m=1
+.param M=4
+.dc Vdd 0 1.8 .001
+.save all
 "}
 C {madvlsi/nmos3.sym} 120 -30 0 0 {name=M11
 L=l
@@ -341,4 +348,27 @@ nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
+}
+C {devices/lab_pin.sym} 290 -270 2 0 {name=l1 sig_type=std_logic lab=Vcp}
+C {devices/lab_pin.sym} 610 -250 2 0 {name=l2 sig_type=std_logic lab=Vcn}
+C {devices/lab_pin.sym} 350 -370 0 0 {name=l4 sig_type=std_logic lab=Vbp}
+C {madvlsi/vdd.sym} 0 -720 0 0 {name=l5 lab=VDD}
+C {madvlsi/gnd.sym} 0 280 0 0 {name=l6 lab=GND}
+C {madvlsi/vsource.sym} -310 -340 0 0 {name=Vdd
+value=1.8
+}
+C {madvlsi/vdd.sym} -310 -390 0 0 {name=l7 lab=VDD}
+C {madvlsi/gnd.sym} -310 -260 0 0 {name=l8 lab=GND}
+C {/home/madvlsi/Desktop/madvlsi/madvlsi_proj_4/schematic/bias_current_resistive.sym} -210 -460 0 0 {name=X1}
+C {madvlsi/vdd.sym} -300 -630 0 0 {name=l11 lab=VDD}
+C {madvlsi/gnd.sym} -300 -510 0 0 {name=l12 lab=GND}
+C {madvlsi/gnd.sym} -80 -590 0 0 {name=l13 lab=GND}
+C {devices/lab_pin.sym} -130 -570 2 0 {name=l14 sig_type=std_logic lab=Vbp}
+C {devices/lab_pin.sym} -160 -550 2 0 {name=l15 sig_type=std_logic lab=Vbn}
+C {madvlsi/tt_models.sym} 650 -620 0 0 {
+name=TT_MODELS
+only_toplevel=false
+value=".option wnflag=1
+.param MC_SWITCH=0.0
+.lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
