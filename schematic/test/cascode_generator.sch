@@ -62,15 +62,13 @@ N 120 240 120 280 { lab=GND}
 N 240 -80 240 240 { lab=GND}
 N -310 -390 -310 -370 { lab=VDD}
 N -310 -310 -310 -260 { lab=GND}
-N -200 -590 -80 -590 { lab=GND}
-N -200 -550 -160 -550 { lab=Vbn}
-N -170 -550 -170 -110 { lab=Vbn}
-N -170 -110 -0 -110 { lab=Vbn}
-N -200 -570 -130 -570 { lab=Vbp}
-N -150 -570 -150 -420 { lab=Vbp}
-N -150 -420 360 -420 { lab=Vbp}
-N 360 -420 360 -370 { lab=Vbp}
 N 450 -690 450 -370 { lab=Vbp}
+N -210 -650 -170 -650 { lab=Vbp}
+N -210 -630 -170 -630 { lab=Vbn}
+N -210 -670 -100 -670 { lab=GND}
+N -100 -670 -100 -650 { lab=GND}
+N -310 -740 -310 -710 { lab=VDD}
+N -310 -590 -310 -560 { lab=GND}
 C {madvlsi/nmos3.sym} 120 -110 0 0 {name=M1
 L=l
 W=w
@@ -121,7 +119,7 @@ L=l
 W=w
 body=VDD
 nf=1
-mult=M
+mult=Mp
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -151,7 +149,7 @@ L=l
 W=w
 body=GND
 nf=1
-mult=M
+mult=Mp
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -221,14 +219,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/code_shown.sym} 660 -440 0 0 {name=SPICE only_toplevel=false value="
-.param w=5
-.param l=2
-.param m=1
-.param M=4
-.dc Vdd 0 1.8 .001
-.save all
-"}
 C {madvlsi/nmos3.sym} 120 -30 0 0 {name=M11
 L=l
 W=w
@@ -359,12 +349,6 @@ value=1.8
 }
 C {madvlsi/vdd.sym} -310 -390 0 0 {name=l7 lab=VDD}
 C {madvlsi/gnd.sym} -310 -260 0 0 {name=l8 lab=GND}
-C {/home/madvlsi/Desktop/madvlsi/madvlsi_proj_4/schematic/bias_current_resistive.sym} -210 -460 0 0 {name=X1}
-C {madvlsi/vdd.sym} -300 -630 0 0 {name=l11 lab=VDD}
-C {madvlsi/gnd.sym} -300 -510 0 0 {name=l12 lab=GND}
-C {madvlsi/gnd.sym} -80 -590 0 0 {name=l13 lab=GND}
-C {devices/lab_pin.sym} -130 -570 2 0 {name=l14 sig_type=std_logic lab=Vbp}
-C {devices/lab_pin.sym} -160 -550 2 0 {name=l15 sig_type=std_logic lab=Vbn}
 C {madvlsi/tt_models.sym} 650 -620 0 0 {
 name=TT_MODELS
 only_toplevel=false
@@ -372,3 +356,20 @@ value=".option wnflag=1
 .param MC_SWITCH=0.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
+C {devices/lab_pin.sym} 0 -110 0 0 {name=l3 sig_type=std_logic lab=Vbn}
+C {devices/code_shown.sym} 670 -470 0 0 {name=s1 only_toplevel=false value="
+
+.param l = 2
+.param w = 5
+.param m = 1
+.param Mp = 4
+
+.tran .001n 1n
+.save all
+"}
+C {/home/madvlsi/Desktop/madvlsi/madvlsi_proj_4/schematic/bias_current_resistive.sym} -220 -540 0 0 {name=X1}
+C {devices/lab_pin.sym} -170 -650 2 0 {name=l9 sig_type=std_logic lab=Vbp}
+C {devices/lab_pin.sym} -170 -630 2 0 {name=l10 sig_type=std_logic lab=Vbn}
+C {madvlsi/gnd.sym} -100 -650 0 0 {name=l11 lab=GND}
+C {madvlsi/gnd.sym} -310 -560 0 0 {name=l12 lab=GND}
+C {madvlsi/vdd.sym} -310 -740 0 0 {name=l13 lab=VDD}
