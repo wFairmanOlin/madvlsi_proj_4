@@ -97,61 +97,70 @@ C {devices/lab_pin.sym} -160 30 1 0 {name=l41 sig_type=std_logic lab=D4}
 C {devices/lab_pin.sym} -100 30 1 0 {name=l43 sig_type=std_logic lab=D5}
 C {devices/code.sym} 850 -480 0 0 {name=SPICE only_toplevel=false value="
 .control
-  set wr_vecnames
   set wr_singlescale
-  let code = 0
-  while code < 128
-    if code eq 0
-      let b0 = 0
-    else
-      let b0 = code % 2
+  let runs = 2
+  let run = 1
+  while run <= runs
+    set appendwrite = False
+    set wr_vecnames
+  
+    let code = 0
+    while code < 128
+      if code eq 0
+        let b0 = 0
+      else
+        let b0 = code % 2
+      end
+      if floor(code / 2) eq 0
+        let b1 = 0
+      else
+        let b1 = floor(code / 2) % 2
+      end
+      if floor(code / 4) eq 0
+        let b2 = 0
+      else
+        let b2 = floor(code / 4) % 2
+      end
+      if floor(code / 8) eq 0
+        let b3 = 0
+      else
+        let b3 = floor(code / 8) % 2
+      end
+      if floor(code / 16) eq 0
+        let b4 = 0
+      else
+        let b4 = floor(code / 16) % 2
+      end
+      if floor(code / 32) eq 0
+        let b5 = 0
+      else
+        let b5 = floor(code / 32) % 2
+      end
+      if floor(code / 64) eq 0
+        let b6 = 0
+      else
+        let b6 = floor(code / 64) % 2
+      end
+      alter V0 $&b0
+      alter V1 $&b1
+      alter V2 $&b2
+      alter V3 $&b3
+      alter V4 $&b4
+      alter V5 $&b5
+      alter V6 $&b6
+      save all
+      op
+      wrdata ~/Desktop/madvlsi/madvlsi_proj_4/data/mc_dac\{$&run\}.txt i(Vout) i(Vdump) i(Vin)
+      if code eq 0
+        set appendwrite
+        set wr_vecnames = FALSE
+      end
+      let code = code + 1
     end
-    if floor(code / 2) eq 0
-      let b1 = 0
-    else
-      let b1 = floor(code / 2) % 2
-    end
-    if floor(code / 4) eq 0
-      let b2 = 0
-    else
-      let b2 = floor(code / 4) % 2
-    end
-    if floor(code / 8) eq 0
-      let b3 = 0
-    else
-      let b3 = floor(code / 8) % 2
-    end
-    if floor(code / 16) eq 0
-      let b4 = 0
-    else
-      let b4 = floor(code / 16) % 2
-    end
-    if floor(code / 32) eq 0
-      let b5 = 0
-    else
-      let b5 = floor(code / 32) % 2
-    end
-    if floor(code / 64) eq 0
-      let b6 = 0
-    else
-      let b6 = floor(code / 64) % 2
-    end
-    alter V0 $&b0
-    alter V1 $&b1
-    alter V2 $&b2
-    alter V3 $&b3
-    alter V4 $&b4
-    alter V5 $&b5
-    alter V6 $&b6
-    save all
-    op
-    wrdata ~/Desktop/madvlsi/madvlsi_proj_4/data/mc_dac.txt i(Vout) i(Vdump) i(Vin)
-    if code eq 0
-      set appendwrite
-      set wr_vecnames = FALSE
-    end
-    let code = code + 1
+    reset
+    let run = run + 1
   end
+quit
 .endc"
 }
 C {madvlsi/tt_models.sym} 980 -470 0 0 {
@@ -162,7 +171,7 @@ value=".option wnflag=1
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
 C {madvlsi/vsource.sym} -510 80 0 0 {name=Vg
-value=1.8}
+value=1.3}
 C {madvlsi/gnd.sym} -510 140 0 0 {name=l50 lab=GND}
 C {devices/lab_pin.sym} -510 30 1 0 {name=l49 sig_type=std_logic lab=Vg}
 C {madvlsi/nmos3.sym} 530 -70 1 0 {name=M1

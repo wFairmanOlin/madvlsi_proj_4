@@ -612,8 +612,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/code_shown.sym} 1460 -120 0 0 {name=SPICE only_toplevel=false value="
-.param w=1
-.param l=10
+.param w=.5
+.param l=2
 .param w2=1
 .param l2=.15
 "}
