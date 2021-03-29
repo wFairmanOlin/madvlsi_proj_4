@@ -175,8 +175,8 @@ value=1.3}
 C {madvlsi/gnd.sym} -510 140 0 0 {name=l50 lab=GND}
 C {devices/lab_pin.sym} -510 30 1 0 {name=l49 sig_type=std_logic lab=Vg}
 C {madvlsi/nmos3.sym} 530 -70 1 0 {name=M1
-L=2
-W=5
+L=.15
+W=2
 body=GND
 nf=1
 mult=1
@@ -190,8 +190,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} 560 220 1 0 {name=M2
-L=2
-W=5
+L=.15
+W=2
 body=GND
 nf=1
 mult=1
