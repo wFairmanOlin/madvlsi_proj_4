@@ -6,11 +6,7 @@ S {}
 E {}
 N 120 -130 120 -90 { lab=#net1}
 N 120 -90 170 -90 { lab=#net1}
-N 330 -70 500 -70 { lab=#net2}
-N 330 50 330 210 { lab=#net3}
 N 120 -150 120 -130 { lab=#net1}
-N 330 220 530 220 { lab=#net3}
-N 330 210 330 220 { lab=#net3}
 N -400 30 -400 50 { lab=D0}
 N -400 110 -400 140 { lab=GND}
 N -340 30 -340 50 { lab=D1}
@@ -29,17 +25,29 @@ N -570 30 -570 50 { lab=VDD}
 N -570 110 -570 140 { lab=GND}
 N -510 30 -510 50 { lab=Vg}
 N -510 110 -510 140 { lab=GND}
-N 530 -100 530 150 { lab=#net4}
-N 530 150 560 150 { lab=#net4}
-N 560 150 560 190 { lab=#net4}
-N 500 150 530 150 { lab=#net4}
-N 740 -70 740 240 { lab=GND}
-N 590 220 640 220 { lab=#net5}
-N 650 220 740 220 { lab=GND}
-N 560 -70 640 -70 { lab=#net6}
-N 650 -70 740 -70 { lab=GND}
-N -50 -150 30 -150 { lab=#net7}
+N -50 -150 30 -150 { lab=#net2}
 N 40 -150 120 -150 { lab=#net1}
+N 330 -70 490 -70 { lab=#net3}
+N 330 50 330 200 { lab=#net4}
+N 330 200 490 200 { lab=#net4}
+N 550 -70 590 -70 { lab=GND}
+N 520 -120 520 -100 { lab=#net3}
+N 470 -150 490 -150 { lab=#net5}
+N 470 -110 470 -70 { lab=#net3}
+N 470 -110 520 -110 { lab=#net3}
+N 410 -150 460 -150 { lab=VDD}
+N 550 -150 590 -150 { lab=GND}
+N 590 -150 590 -70 { lab=GND}
+N 550 200 590 200 { lab=GND}
+N 520 150 520 170 { lab=#net4}
+N 470 120 490 120 { lab=#net6}
+N 470 160 470 200 { lab=#net4}
+N 470 160 520 160 { lab=#net4}
+N 410 120 460 120 { lab=VDD}
+N 550 120 590 120 { lab=GND}
+N 590 120 590 200 { lab=GND}
+N 590 200 590 210 { lab=GND}
+N 590 -70 590 -60 { lab=GND}
 C {ladder.sym} 320 30 0 0 {name=X1}
 C {bias_current_resistive.sym} -60 -20 0 0 {name=X4}
 C {cascode_generator.sym} 140 -50 0 0 {name=X5}
@@ -98,7 +106,7 @@ C {devices/lab_pin.sym} -100 30 1 0 {name=l43 sig_type=std_logic lab=D5}
 C {devices/code.sym} 850 -480 0 0 {name=SPICE only_toplevel=false value="
 .control
   set wr_singlescale
-  let runs = 2
+  let runs = 1
   let run = 1
   while run <= runs
     set appendwrite = False
@@ -171,43 +179,73 @@ value=".option wnflag=1
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
 C {madvlsi/vsource.sym} -510 80 0 0 {name=Vg
-value=1.3}
+value=1.8}
 C {madvlsi/gnd.sym} -510 140 0 0 {name=l50 lab=GND}
 C {devices/lab_pin.sym} -510 30 1 0 {name=l49 sig_type=std_logic lab=Vg}
-C {madvlsi/nmos3.sym} 530 -70 1 0 {name=M1
-L=.15
-W=2
-body=GND
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {madvlsi/nmos3.sym} 560 220 1 0 {name=M2
-L=.15
-W=2
-body=GND
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {madvlsi/vsource.sym} 470 150 1 0 {name=V7
-value=1.8}
-C {madvlsi/gnd.sym} 440 150 0 0 {name=l1 lab=GND}
-C {madvlsi/gnd.sym} 740 240 0 0 {name=l2 lab=GND}
-C {madvlsi/ammeter1.sym} 640 -70 3 0 {name=Vout}
-C {madvlsi/ammeter1.sym} 640 220 3 0 {name=Vdump}
+C {madvlsi/ammeter1.sym} 460 120 3 0 {name=Vdump}
 C {madvlsi/ammeter1.sym} 30 -150 3 0 {name=Vin}
+C {madvlsi/gnd.sym} 590 -60 0 0 {name=l1 lab=GND}
+C {madvlsi/nmos3.sym} 520 -70 1 0 {name=M1
+L=0.15
+W=1
+body=GND
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {madvlsi/nmos3.sym} 520 -150 3 0 {name=M2
+L=0.15
+W=1
+body=GND
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {madvlsi/vdd.sym} 410 -150 0 0 {name=l2 lab=VDD}
+C {madvlsi/ammeter1.sym} 460 -150 3 0 {name=Vout}
+C {madvlsi/gnd.sym} 590 210 0 0 {name=l12 lab=GND}
+C {madvlsi/nmos3.sym} 520 200 1 0 {name=M3
+L=0.15
+W=1
+body=GND
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {madvlsi/nmos3.sym} 520 120 3 0 {name=M4
+L=0.15
+W=1
+body=GND
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {madvlsi/vdd.sym} 410 120 0 0 {name=l13 lab=VDD}

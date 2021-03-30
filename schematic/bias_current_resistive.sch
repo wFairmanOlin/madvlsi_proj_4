@@ -171,7 +171,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/resistor.sym} 0 210 0 0 {name=R1
-value=74k
+value=50k
 m=1}
 C {devices/code_shown.sym} 390 -250 0 0 {name=s1 only_toplevel=false value="
 .param w=5
