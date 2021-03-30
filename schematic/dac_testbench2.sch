@@ -4,14 +4,8 @@ K {}
 V {}
 S {}
 E {}
-N 120 -130 120 -90 { lab=#net1}
 N 120 -90 170 -90 { lab=#net1}
-N 330 -70 500 -70 { lab=#net2}
 N 500 -70 530 -70 { lab=#net2}
-N 330 50 330 210 { lab=#net3}
-N 120 -150 120 -130 { lab=#net1}
-N 330 220 530 220 { lab=#net3}
-N 330 210 330 220 { lab=#net3}
 N -400 30 -400 50 { lab=D0}
 N -400 110 -400 140 { lab=GND}
 N -340 30 -340 50 { lab=D1}
@@ -30,8 +24,8 @@ N -570 30 -570 50 { lab=VDD}
 N -570 110 -570 140 { lab=GND}
 N -510 30 -510 50 { lab=Vg}
 N -510 110 -510 140 { lab=GND}
-N 710 -130 740 -130 { lab=#net4}
-N 710 160 740 160 { lab=#net5}
+N 710 -130 740 -130 { lab=#net3}
+N 710 160 740 160 { lab=#net4}
 N 750 -130 800 -130 { lab=VDD}
 N 750 160 800 160 { lab=VDD}
 N 500 -200 500 -190 { lab=VDD}
@@ -43,9 +37,19 @@ N 500 100 530 100 { lab=VDD}
 N 500 260 500 270 { lab=GND}
 N 500 260 530 260 { lab=GND}
 N 800 -190 800 160 { lab=VDD}
-N -50 -150 40 -150 { lab=#net6}
-N 50 -150 120 -150 { lab=#net1}
+N -50 -150 40 -150 { lab=GND}
 N 240 -140 260 -140 { lab=Vg}
+N 30 110 30 140 { lab=GND}
+N 30 -90 30 50 { lab=#net5}
+N 30 -90 70 -90 { lab=#net5}
+N 80 -90 110 -90 { lab=#net1}
+N 110 -90 120 -90 { lab=#net1}
+N 330 -70 350 -70 { lab=#net6}
+N 330 50 350 50 { lab=#net7}
+N 360 -70 500 -70 { lab=#net2}
+N 360 50 400 50 { lab=#net8}
+N 400 50 400 220 { lab=#net8}
+N 400 220 530 220 { lab=#net8}
 C {ladder.sym} 320 30 0 0 {name=X1}
 C {iout_mirror.sym} 470 90 0 0 {name=X2}
 C {iout_mirror.sym} 470 380 0 0 {name=X3}
@@ -95,74 +99,6 @@ C {devices/lab_pin.sym} -280 30 1 0 {name=l37 sig_type=std_logic lab=D2}
 C {devices/lab_pin.sym} -220 30 1 0 {name=l39 sig_type=std_logic lab=D3}
 C {devices/lab_pin.sym} -160 30 1 0 {name=l41 sig_type=std_logic lab=D4}
 C {devices/lab_pin.sym} -100 30 1 0 {name=l43 sig_type=std_logic lab=D5}
-C {devices/code.sym} 570 -430 0 0 {name=SPICE only_toplevel=false value="
-.param vg = 1.2
-.control
-  set wr_singlescale
-  let runs = 1
-  let run = 1
-  while run <= runs
-    set appendwrite = False
-    set wr_vecnames
-    let code = 0
-    while code < 128
-      if code eq 0
-        let b0 = 0
-      else
-        let b0 = code % 2
-      end
-      if floor(code / 2) eq 0
-        let b1 = 0
-      else
-        let b1 = floor(code / 2) % 2
-      end
-      if floor(code / 4) eq 0
-        let b2 = 0
-      else
-        let b2 = floor(code / 4) % 2
-      end
-      if floor(code / 8) eq 0
-        let b3 = 0
-      else
-        let b3 = floor(code / 8) % 2
-      end
-      if floor(code / 16) eq 0
-        let b4 = 0
-      else
-        let b4 = floor(code / 16) % 2
-      end
-      if floor(code / 32) eq 0
-        let b5 = 0
-      else
-        let b5 = floor(code / 32) % 2
-      end
-      if floor(code / 64) eq 0
-        let b6 = 0
-      else
-        let b6 = floor(code / 64) % 2
-      end
-      alter V0 $&b0
-      alter V1 $&b1
-      alter V2 $&b2
-      alter V3 $&b3
-      alter V4 $&b4
-      alter V5 $&b5
-      alter V6 $&b6
-      save all
-      op
-      wrdata ~/Desktop/madvlsi/madvlsi_proj_4/data/mc_dac\{$&run\}.txt i(Vout) i(Vdump) i(Vin)
-      if code eq 0
-        set appendwrite
-        set wr_vecnames = FALSE
-      end
-      let code = code + 1
-    end
-    reset
-    let run = run + 1
-  end
-quit
-.endc"
-}
 C {madvlsi/tt_models.sym} 700 -430 0 0 {
 name=TT_MODELS
 only_toplevel=false
@@ -181,7 +117,7 @@ C {devices/lab_pin.sym} 530 180 0 0 {name=l12 sig_type=std_logic lab=Vbp}
 C {madvlsi/vdd.sym} 500 90 0 0 {name=l13 lab=VDD}
 C {madvlsi/gnd.sym} 500 270 0 0 {name=l1 lab=GND}
 C {madvlsi/vdd.sym} 800 -190 0 0 {name=l8 lab=VDD}
-C {madvlsi/ammeter1.sym} 40 -150 3 0 {name=Vin}
+C {madvlsi/ammeter1.sym} 70 -90 3 0 {name=Vin}
 C {devices/lab_pin.sym} 240 -140 0 0 {name=l20 sig_type=std_logic lab=Vg}
 C {madvlsi/vsource.sym} -340 80 0 0 {name=V1
 value=vg
@@ -201,3 +137,19 @@ value=vg
 C {madvlsi/vsource.sym} -40 80 0 0 {name=V6
 value=vg
 }
+C {devices/code_shown.sym} 520 -420 0 0 {name=SPICE only_toplevel=false value=
+"
+.param vg=1.8
+.dc vds 0 1.8 .001
+.save all
+"
+
+
+}
+C {madvlsi/vsource.sym} 30 80 0 0 {name=vds
+value=1.8
+}
+C {madvlsi/gnd.sym} 30 140 0 0 {name=l3 lab=GND}
+C {madvlsi/gnd.sym} 40 -150 0 0 {name=l23 lab=GND}
+C {madvlsi/ammeter1.sym} 350 -70 3 0 {name=Vlout}
+C {madvlsi/ammeter1.sym} 350 50 3 0 {name=Vldump}

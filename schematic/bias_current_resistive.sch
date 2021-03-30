@@ -171,7 +171,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/resistor.sym} 0 210 0 0 {name=R1
-value=50k
+value=74k
 m=1}
 C {devices/code_shown.sym} 390 -250 0 0 {name=s1 only_toplevel=false value="
 .param w=5
@@ -188,7 +188,7 @@ L=l
 W=w
 body=VDD
 nf=1
-mult=1
+mult=11
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 

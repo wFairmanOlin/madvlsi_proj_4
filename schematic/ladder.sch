@@ -613,7 +613,7 @@ spiceprefix=X
 }
 C {devices/code_shown.sym} 1460 -120 0 0 {name=SPICE only_toplevel=false value="
 .param w=.5
-.param l=2
+.param l=5
 .param w2=1
 .param l2=.15
 "}
