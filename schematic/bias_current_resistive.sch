@@ -40,14 +40,10 @@ N -0 -140 0 -80 { lab=vp}
 N -30 -140 0 -140 { lab=vp}
 N -30 240 -0 240 { lab=vn}
 N 360 10 360 20 { lab=Vbn}
-N 330 120 420 120 { lab=Vbn}
 N 330 -50 460 -50 { lab=Vbp}
 N 460 -50 570 -50 { lab=Vbp}
 N 490 -20 490 20 { lab=iout}
 N 490 20 570 20 { lab=iout}
-N 420 120 460 120 { lab=Vbn}
-N 460 120 560 120 { lab=Vbn}
-N 560 120 570 120 { lab=Vbn}
 N 490 -140 490 -80 { lab=vp}
 N 360 -140 490 -140 { lab=vp}
 C {madvlsi/pmos3.sym} 0 -50 2 0 {name=M1
@@ -171,10 +167,10 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/resistor.sym} 0 210 0 0 {name=R1
-value=74k
+value=30k
 m=1}
 C {devices/code_shown.sym} 390 -250 0 0 {name=s1 only_toplevel=false value="
-.param w=5
+.param w=10
 .param l=2
 .param Mn=8
 "}
@@ -182,13 +178,12 @@ C {devices/iopin.sym} -30 -140 2 0 {name=p1 lab=vp}
 C {devices/iopin.sym} -30 240 2 0 {name=p2 lab=vn}
 C {devices/opin.sym} 570 20 0 0 {name=p3 lab=iout}
 C {devices/opin.sym} 570 -50 0 0 {name=p4 lab=Vbp}
-C {devices/opin.sym} 570 120 0 0 {name=p5 lab=Vbn}
 C {madvlsi/pmos3.sym} 490 -50 0 0 {name=M9
 L=l
 W=w
 body=VDD
 nf=1
-mult=11
+mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
