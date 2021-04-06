@@ -4,7 +4,6 @@ K {}
 V {}
 S {}
 E {}
-N 0 -720 540 -720 { lab=Vp}
 N 370 -250 390 -250 { lab=#net1}
 N 370 -250 370 -110 { lab=#net1}
 N 370 -110 390 -110 { lab=#net1}
@@ -30,6 +29,7 @@ N 420 -660 420 -640 { lab=#net6}
 N 540 -720 540 -400 { lab=Vp}
 N 350 -370 510 -370 { lab=Vbp}
 N 360 -40 420 -40 { lab=Vn}
+N 270 -720 540 -720 { lab=Vp}
 C {madvlsi/nmos3.sym} 420 -250 0 0 {name=M6
 L=l
 W=w
@@ -107,9 +107,9 @@ spiceprefix=X
 }
 C {devices/ipin.sym} 350 -370 0 0 {name=p1 lab=Vbp}
 C {devices/iopin.sym} 360 -40 2 0 {name=p3 lab=Vn}
-C {devices/iopin.sym} 0 -720 2 0 {name=p4 lab=Vp}
+C {devices/iopin.sym} 270 -720 2 0 {name=p4 lab=Vp}
 C {devices/opin.sym} 610 -250 0 0 {name=p6 lab=Vcn}
-C {devices/code_shown.sym} 660 -440 0 0 {name=SPICE only_toplevel=false value="
+C {devices/code_shown.sym} 660 -440 0 0 {name=s1 only_toplevel=false value="
 .param w=10
 .param l=2
 .param m=1

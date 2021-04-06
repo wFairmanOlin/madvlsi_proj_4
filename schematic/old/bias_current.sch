@@ -49,22 +49,13 @@ N 360 -360 500 -360 { lab=vp}
 N 500 -360 560 -360 { lab=vp}
 N 570 -310 700 -310 { lab=Vbp}
 N 600 -360 730 -360 { lab=vp}
-N 730 -360 730 -340 { lab=vp}
 N 310 -260 370 -260 { lab=#net5}
-N 600 -40 730 -40 { lab=vn}
-N 760 -170 780 -170 { lab=Vbn}
-N 780 -210 780 -170 { lab=Vbn}
-N 780 -220 780 -210 { lab=Vbn}
-N 730 -220 780 -220 { lab=Vbn}
 N 120 -240 120 -200 { lab=#net4}
 N 500 -240 500 -200 { lab=#net3}
 N 600 -240 600 -220 { lab=#net2}
-N 730 -220 730 -200 { lab=Vbn}
-N 730 -240 730 -220 { lab=Vbn}
 N 280 -310 290 -310 { lab=#net5}
 N 330 -310 340 -310 { lab=#net5}
 N 160 -240 250 -240 { lab=Vbp}
-N 730 -140 730 -40 { lab=vn}
 N 120 -280 120 -260 { lab=#net4}
 N 160 -310 160 -270 { lab=Vbp}
 N 250 -280 250 -240 { lab=Vbp}
@@ -73,7 +64,6 @@ N 310 -270 310 -260 { lab=#net5}
 N 450 -310 450 -270 { lab=Vbp}
 N 500 -280 500 -260 { lab=#net3}
 N 600 -280 600 -260 { lab=#net2}
-N 730 -280 730 -260 { lab=Vbn}
 N 160 -270 160 -240 { lab=Vbp}
 N 250 -240 450 -240 { lab=Vbp}
 N 450 -270 450 -240 { lab=Vbp}
@@ -82,22 +72,56 @@ N 250 -220 250 -200 { lab=Vbp}
 N 370 -280 370 -200 { lab=#net5}
 N 500 -260 500 -240 { lab=#net3}
 N 600 -260 600 -240 { lab=#net2}
-N 730 -260 730 -240 { lab=Vbn}
 N 80 -360 120 -360 { lab=vp}
 N 80 -40 120 -40 { lab=vn}
-N 700 -310 830 -310 { lab=Vbp}
-N 730 -360 860 -360 { lab=vp}
-N 860 -360 860 -340 { lab=vp}
-N 860 -280 860 -260 { lab=iout}
-N 860 -260 920 -260 { lab=iout}
-N 830 -310 920 -310 { lab=Vbp}
-N 780 -170 920 -170 { lab=Vbn}
+N 730 -360 730 -340 { lab=vp}
+N 730 -280 730 -260 { lab=iout}
+N 730 -260 790 -260 { lab=iout}
+N 700 -310 790 -310 { lab=Vbp}
+N 790 -310 850 -310 { lab=Vbp}
+N 880 -360 880 -340 { lab=vp}
+N 730 -360 880 -360 { lab=vp}
+N 850 -310 960 -310 { lab=Vbp}
+N 880 -280 880 -220 { lab=vgate}
+N 880 -220 940 -220 { lab=vgate}
+N 1040 -220 1100 -220 { lab=vgate~}
+N 1230 -220 1290 -220 { lab=vlgate}
+N 880 -100 880 -80 { lab=GND}
+N 830 -90 880 -90 { lab=GND}
+N 830 -130 830 -90 { lab=GND}
+N 830 -130 850 -130 { lab=GND}
+N 880 -130 900 -130 { lab=vgate}
+N 880 -220 880 -160 { lab=vgate}
+N 880 -160 900 -160 { lab=vgate}
+N 900 -160 900 -130 { lab=vgate}
+N 1040 -100 1040 -80 { lab=GND}
+N 990 -90 1040 -90 { lab=GND}
+N 990 -130 990 -90 { lab=GND}
+N 990 -130 1010 -130 { lab=GND}
+N 1040 -130 1060 -130 { lab=vgate~}
+N 1040 -160 1060 -160 { lab=vgate~}
+N 1060 -160 1060 -130 { lab=vgate~}
+N 1230 -100 1230 -80 { lab=GND}
+N 1180 -90 1230 -90 { lab=GND}
+N 1180 -130 1180 -90 { lab=GND}
+N 1180 -130 1200 -130 { lab=GND}
+N 1230 -130 1250 -130 { lab=vlgate}
+N 1230 -160 1250 -160 { lab=vlgate}
+N 1250 -160 1250 -130 { lab=vlgate}
+N 1230 -220 1230 -160 { lab=vlgate}
+N 1040 -220 1040 -160 { lab=vgate~}
+N 960 -310 1300 -310 {}
+N 1040 -280 1040 -220 {}
+N 1230 -280 1230 -220 {}
+N 1230 -360 1230 -340 {}
+N 880 -360 1230 -360 {}
+N 1040 -360 1040 -340 {}
 C {madvlsi/nmos3.sym} 120 -170 2 0 {name=M1
 L=l
 W=w
 body=GND
 nf=1
-mult=1
+mult=m
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -112,7 +136,7 @@ L=l
 W=w
 body=GND
 nf=1
-mult=Mn
+mult=Mn*m
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -127,7 +151,7 @@ L=l
 W=w
 body=VDD
 nf=1
-mult=1
+mult=m
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -142,7 +166,7 @@ L=l
 W=w
 body=VDD
 nf=1
-mult=1
+mult=m
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -157,7 +181,7 @@ L=l
 W=w
 body=GND
 nf=1
-mult=1
+mult=m
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -172,7 +196,7 @@ L=l
 W=w
 body=GND
 nf=1
-mult=1
+mult=m
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -187,7 +211,7 @@ L=l
 W=w
 body=VDD
 nf=1
-mult=Mp
+mult=Mp*m
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -202,7 +226,7 @@ L=l
 W=w
 body=GND
 nf=1
-mult=1
+mult=m
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -217,7 +241,7 @@ L=l
 W=w
 body=GND
 nf=1
-mult=1
+mult=m
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -232,7 +256,7 @@ L=l
 W=w
 body=VDD
 nf=1
-mult=1
+mult=m
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -247,7 +271,7 @@ L=l
 W=w
 body=VDD
 nf=1
-mult=1
+mult=m
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -259,7 +283,8 @@ spiceprefix=X
 }
 C {devices/code_shown.sym} 200 -560 0 0 {name=SPICE only_toplevel=false value=".param Mn=8
 .param Mp=9
-.param w=5
+.param m = 1
+.param w=10
 .param l=2
 *M13 NEEDS TO MATCH*
 *UNIT TRANSISTOR SIZE*
@@ -267,12 +292,16 @@ C {devices/code_shown.sym} 200 -560 0 0 {name=SPICE only_toplevel=false value=".
 *CASCODE GENERATOR*
 *AND* 
 *OUTPUT CURRENT MIRROR*"}
-C {madvlsi/pmos3.sym} 730 -310 0 0 {name=M12
+C {devices/iopin.sym} 80 -360 2 0 {name=p1 lab=vp}
+C {devices/iopin.sym} 80 -40 2 0 {name=p2 lab=vn}
+C {devices/opin.sym} 790 -260 0 0 {name=p3 lab=iout}
+C {devices/opin.sym} 1300 -310 0 0 {name=p4 lab=Vbp}
+C {madvlsi/pmos3.sym} 730 -310 0 0 {name=M14
 L=l
 W=w
 body=VDD
 nf=1
-mult=1
+mult=m
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -282,32 +311,90 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 730 -170 2 0 {name=M13
-L=2
-W=5
-body=GND
+C {madvlsi/pmos3.sym} 880 -310 0 0 {name=M12
+L=l
+W=w
+body=VDD
 nf=1
-mult=1
+mult=m
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
 ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
 nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
-model=nfet_01v8
+model=pfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 80 -360 2 0 {name=p1 lab=vp}
-C {devices/iopin.sym} 80 -40 2 0 {name=p2 lab=vn}
-C {devices/opin.sym} 920 -260 0 0 {name=p3 lab=iout}
-C {devices/opin.sym} 920 -310 0 0 {name=p4 lab=Vbp}
-C {devices/opin.sym} 920 -170 0 0 {name=p5 lab=Vbn}
-C {madvlsi/pmos3.sym} 860 -310 0 0 {name=M14
+C {devices/opin.sym} 940 -220 0 0 {name=p6 lab=vgate}
+C {devices/opin.sym} 1100 -220 0 0 {name=p7 lab=vgate~}
+C {devices/opin.sym} 1290 -220 0 0 {name=p8 lab=vlgate}
+C {madvlsi/pmos4.sym} 880 -130 0 0 {name=M13
+L=2
+W=10
+nf=1
+mult=6
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/gnd.sym} 880 -80 0 0 {name=l3 lab=GND}
+C {madvlsi/pmos4.sym} 1040 -130 0 0 {name=M15
+L=2
+W=10
+nf=1
+mult=6
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/gnd.sym} 1040 -80 0 0 {name=l1 lab=GND}
+C {madvlsi/pmos4.sym} 1230 -130 0 0 {name=M16
+L=2
+W=10
+nf=1
+mult=6
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/gnd.sym} 1230 -80 0 0 {name=l2 lab=GND}
+C {madvlsi/pmos3.sym} 1040 -310 0 0 {name=M17
 L=l
 W=w
 body=VDD
 nf=1
-mult=1
+mult=m
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/pmos3.sym} 1230 -310 0 0 {name=M18
+L=l
+W=w
+body=VDD
+nf=1
+mult=m
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
