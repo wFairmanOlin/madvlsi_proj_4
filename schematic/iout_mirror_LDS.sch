@@ -226,6 +226,7 @@ N -2040 -220 -2040 -130 { lab=VP}
 N 1950 -40 2040 -40 { lab=Iin}
 N 1950 -20 2040 -20 { lab=Iout}
 N 1950 20 2040 20 { lab=Vcn}
+N 1950 -110 2040 -110 {}
 C {devices/code_shown.sym} -90 -360 0 0 {name=SPICE only_toplevel=false value="
 .param w=5
 .param l=2

@@ -21,7 +21,6 @@ N -60 260 -60 290 { lab=GND}
 N -690 -370 -690 -350 { lab=VDD}
 N -690 -290 -690 -260 { lab=GND}
 N 330 -70 370 -70 { lab=#net8}
-N 380 -70 500 -70 { lab=VloutV}
 N 330 50 360 50 { lab=#net9}
 N 370 50 500 50 { lab=VldumpV}
 N -660 70 -660 180 { lab=#net1}
@@ -61,7 +60,6 @@ N -540 -350 -540 -110 { lab=Vbp}
 N 70 -90 80 -90 { lab=Vin}
 N 80 -90 110 -90 { lab=Vin}
 N 120 -90 170 -90 { lab=#net10}
-N -760 -90 -760 -80 { lab=Vgate}
 N -540 -480 -540 -350 { lab=Vbp}
 N -540 -480 -420 -480 { lab=Vbp}
 N 500 60 500 180 { lab=VldumpV}
@@ -75,7 +73,13 @@ N 800 120 850 120 { lab=#net11}
 N 680 -130 780 -130 { lab=#net13}
 N 790 -130 850 -130 { lab=#net11}
 N 740 120 750 120 { lab=#net12}
-N 500 180 560 180 { lab=VldumpV}
+N 380 -70 420 -70 { lab=VloutV}
+N 420 -70 420 -60 { lab=VloutV}
+N 420 -60 500 -60 { lab=VloutV}
+N 500 180 500 190 { lab=VldumpV}
+N 500 190 560 190 { lab=VldumpV}
+N -760 -90 -740 -90 { lab=#net14}
+N -730 -90 -710 -90 { lab=Vgate}
 C {madvlsi/gnd.sym} 260 140 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 170 -30 0 0 {name=l25 sig_type=std_logic lab=D0}
 C {devices/lab_pin.sym} 170 -10 0 0 {name=l26 sig_type=std_logic lab=D1}
@@ -160,7 +164,7 @@ C {devices/code.sym} 30 -340 0 0 {name=SPICE only_toplevel=false value="
       alter V6 $&b6
       save all
       op
-      wrdata ~/Documents/madvlsi_proj_4/data/ladder\{$&run\}.txt i(VloutI) i(VldumpI) v(Vin) v(Vgate) v(D0) i(VinI) i(VgateI) v(VloutV) v(VldumpV) i(Vout) i(Vdump)
+      wrdata ~/Desktop/madvlsi/madvlsi_proj_4/data/mc_dac\{$&run\}.txt i(VloutI) i(VldumpI) v(Vin) v(Vgate) v(D0) i(VinI) i(VgateI) v(VloutV) v(VldumpV) i(Vout) i(Vdump)
       if code eq 0
         set appendwrite
         set wr_vecnames = FALSE
@@ -170,6 +174,7 @@ C {devices/code.sym} 30 -340 0 0 {name=SPICE only_toplevel=false value="
     reset
     let run = run + 1
   end
+quit
 .endc"
 }
 C {madvlsi/tt_models.sym} 190 -330 0 0 {
@@ -437,14 +442,15 @@ C {iout_mirror_LDS.sym} 440 90 0 0 {name=X3}
 C {iout_mirror_LDS.sym} 500 340 0 0 {name=X5}
 C {madvlsi/gnd.sym} 500 -30 0 0 {name=l1 lab=GND}
 C {madvlsi/gnd.sym} 560 220 0 0 {name=l17 lab=GND}
-C {devices/lab_pin.sym} 560 100 0 0 {name=l22 sig_type=std_logic lab=Vcn}
-C {devices/lab_pin.sym} 560 140 0 0 {name=l24 sig_type=std_logic lab=Vbp}
-C {devices/lab_pin.sym} 500 -110 0 0 {name=l50 sig_type=std_logic lab=Vbp}
+C {devices/lab_pin.sym} 560 130 0 0 {name=l22 sig_type=std_logic lab=Vcn}
+C {devices/lab_pin.sym} 560 160 0 0 {name=l24 sig_type=std_logic lab=Vbp}
+C {devices/lab_pin.sym} 500 -90 0 0 {name=l50 sig_type=std_logic lab=Vbp}
 C {madvlsi/vdd.sym} 500 -190 0 0 {name=l52 lab=VDD}
 C {madvlsi/vdd.sym} 560 60 0 0 {name=l53 lab=VDD}
-C {devices/lab_pin.sym} 500 -150 0 0 {name=l51 sig_type=std_logic lab=Vcn}
+C {devices/lab_pin.sym} 500 -120 0 0 {name=l51 sig_type=std_logic lab=Vcn}
 C {devices/lab_pin.sym} 260 -140 0 0 {name=l57 sig_type=std_logic lab=Vgate}
 C {devices/lab_pin.sym} 170 -70 0 0 {name=l2 sig_type=std_logic lab=Vgate}
 C {devices/lab_pin.sym} -30 -50 2 0 {name=l4 sig_type=std_logic lab=Vgate}
 C {bias_current_LDS.sym} -770 0 0 0 {name=X2}
-C {devices/lab_pin.sym} -760 -80 2 0 {name=l7 sig_type=std_logic lab=Vgate}
+C {devices/lab_pin.sym} -710 -90 2 0 {name=l7 sig_type=std_logic lab=Vgate}
+C {madvlsi/ammeter1.sym} -740 -90 3 0 {name=VgateI}

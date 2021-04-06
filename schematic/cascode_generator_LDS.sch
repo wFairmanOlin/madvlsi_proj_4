@@ -62,15 +62,13 @@ N -1130 -340 -1130 -320 { lab=Vbp}
 N -1010 -340 -1010 -320 { lab=Vbp}
 N -980 -370 -920 -370 { lab=#net6}
 N -890 -340 -890 -320 { lab=Vbp}
-N -1430 -430 -1430 -370 { lab=Vp}
+N -950 -430 -950 -370 { lab=Vp}
 N -1580 -370 -1520 -370 { lab=Vcn}
-N -1550 -370 -1550 -200 { lab=Vcn}
 N -1640 -340 -1610 -340 { lab=Vp}
 N -1640 -370 -1640 -340 { lab=Vp}
 N -1640 -430 -1640 -370 { lab=Vp}
 N -1660 -320 -890 -320 { lab=Vbp}
 N -860 -370 -800 -370 { lab=#net1}
-N -830 -370 -830 -220 { lab=#net1}
 N -890 -220 -770 -220 { lab=#net1}
 N -500 -370 -440 -370 { lab=#net7}
 N -620 -370 -560 -370 { lab=#net8}
@@ -85,8 +83,6 @@ N -260 -370 -200 -370 { lab=Vp}
 N -170 -340 -170 -320 { lab=Vbp}
 N -140 -370 -80 -370 { lab=Vcn}
 N -890 -320 -170 -320 { lab=Vbp}
-N -230 -430 -230 -370 { lab=Vp}
-N -110 -370 -110 -200 { lab=Vcn}
 N -170 -320 0 -320 { lab=Vbp}
 N -50 -340 -20 -340 { lab=Vp}
 N -20 -430 -20 -340 { lab=Vp}
@@ -95,6 +91,12 @@ N -350 -220 -350 -150 { lab=#net1}
 N -590 -220 -590 -150 { lab=#net1}
 N -1070 -220 -1070 -150 { lab=#net1}
 N -1310 -220 -1310 -150 { lab=#net1}
+N -830 -370 -830 -200 {}
+N -1550 -370 -1550 -220 {}
+N -710 -430 -710 -370 { lab=Vp}
+N -110 -370 -110 -220 {}
+N -290 -220 -110 -220 {}
+N -1550 -220 -1370 -220 {}
 C {devices/code_shown.sym} -910 -520 0 0 {name=s1 only_toplevel=false value="
 .param w=5
 .param l=2
@@ -404,7 +406,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} -1430 -430 3 0 {name=p9 lab=Vp}
+C {devices/iopin.sym} -950 -430 3 0 {name=p9 lab=Vp}
 C {madvlsi/pmos3.sym} -1610 -370 3 0 {name=M30
 L=l
 W=w
@@ -527,5 +529,5 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} -230 -430 3 0 {name=p12 lab=Vp}
 C {devices/iopin.sym} -20 -430 3 0 {name=p13 lab=Vp}
+C {devices/iopin.sym} -710 -430 3 0 {name=p1 lab=Vp}
