@@ -4,8 +4,7 @@ K {}
 V {}
 S {}
 E {}
-N 4100 -430 4250 -430 { lab=vp}
-N 4360 -230 4450 -230 { lab=igate}
+N 370 -230 460 -230 { lab=vgate}
 N 1680 -340 1700 -340 { lab=vp}
 N 900 -340 920 -340 { lab=vp}
 N 1080 -340 1120 -340 { lab=vp}
@@ -325,66 +324,69 @@ N 3400 -340 3400 -180 { lab=#net1}
 N 3300 -180 3400 -180 { lab=#net1}
 N 3300 -430 3300 -340 { lab=vp}
 N 3250 -370 3300 -370 { lab=vp}
-N 4240 -100 4280 -100 { lab=vn}
-N 4160 -100 4180 -100 { lab=vp}
-N 4310 -130 4310 -100 { lab=igate}
-N 4310 -130 4410 -130 { lab=igate}
-N 4410 -130 4410 -100 { lab=igate}
-N 4340 -100 4380 -100 { lab=igate}
-N 4360 -130 4360 -100 { lab=igate}
-N 4360 -340 4360 -130 { lab=igate}
-N 4340 -340 4360 -340 { lab=igate}
-N 4360 -340 4380 -340 { lab=igate}
-N 4240 -340 4280 -340 { lab=vp}
-N 4260 -430 4260 -350 { lab=vp}
-N 4260 -350 4260 -340 { lab=vp}
-N 4250 -430 4260 -430 { lab=vp}
-N 4440 -100 4480 -100 { lab=vn}
-N 4260 -100 4260 60 { lab=vn}
-N 4100 60 4260 60 { lab=vn}
-N 4460 -100 4460 60 { lab=vn}
-N 4260 60 4460 60 { lab=vn}
-N 4210 -130 4210 -100 { lab=igate}
-N 4210 -130 4310 -130 { lab=igate}
-N 4510 -130 4510 -100 { lab=igate}
-N 4410 -130 4510 -130 { lab=igate}
-N 4140 -410 4410 -410 { lab=Vbp}
-N 4310 -410 4310 -370 { lab=Vbp}
-N 4410 -410 4410 -370 { lab=Vbp}
-N 4260 -430 4460 -430 { lab=vp}
-N 4460 -430 4460 -340 { lab=vp}
-N 4440 -340 4460 -340 { lab=vp}
-N 4460 -340 4480 -340 { lab=vp}
-N 4160 -430 4160 -340 { lab=vp}
-N 4460 -430 4530 -430 { lab=vp}
-N 4530 -430 4540 -430 { lab=vp}
-N 4510 -370 4540 -370 { lab=vp}
-N 4410 -410 4580 -410 { lab=Vbp}
-N 4540 -340 4560 -340 { lab=vp}
-N 4560 -430 4560 -340 { lab=vp}
-N 4540 -430 4560 -430 { lab=vp}
-N 4540 -370 4560 -370 { lab=vp}
-N 4160 -340 4180 -340 { lab=vp}
-N 4160 -370 4210 -370 { lab=vp}
-N 4160 -340 4160 -100 { lab=vp}
-N 4540 -100 4560 -100 { lab=#net6}
-N 4560 -340 4560 -110 { lab=vp}
-N 4310 -70 4310 -50 {}
-N 4310 -50 4410 -50 {}
-N 4410 -70 4410 -50 {}
-N 4360 -50 4360 60 {}
-N 4210 -70 4210 -50 {}
-N 4160 -50 4210 -50 {}
-N 4160 -100 4160 -50 {}
-N 4510 -70 4510 -50 {}
-N 4510 -50 4560 -50 {}
-N 4560 -100 4560 -50 {}
-N 4560 -110 4560 -100 {}
-C {devices/iopin.sym} 640 -430 2 0 {name=p1 lab=vp}
-C {devices/iopin.sym} 640 60 2 0 {name=p2 lab=vn}
+N 250 -100 290 -100 { lab=vn}
+N 170 -100 190 -100 { lab=vp}
+N 320 -130 320 -100 { lab=vgate}
+N 320 -130 420 -130 { lab=vgate}
+N 420 -130 420 -100 { lab=vgate}
+N 350 -100 390 -100 { lab=vgate}
+N 370 -130 370 -100 { lab=vgate}
+N 370 -340 370 -130 { lab=vgate}
+N 350 -340 370 -340 { lab=vgate}
+N 370 -340 390 -340 { lab=vgate}
+N 250 -340 290 -340 { lab=vp}
+N 270 -430 270 -350 { lab=vp}
+N 270 -350 270 -340 { lab=vp}
+N 260 -430 270 -430 { lab=vp}
+N 450 -100 490 -100 { lab=vn}
+N 270 -100 270 60 { lab=vn}
+N 470 -100 470 60 { lab=vn}
+N 270 60 470 60 { lab=vn}
+N 220 -130 220 -100 { lab=vgate}
+N 220 -130 320 -130 { lab=vgate}
+N 520 -130 520 -100 { lab=vgate}
+N 420 -130 520 -130 { lab=vgate}
+N 320 -410 320 -370 { lab=Vbp}
+N 420 -410 420 -370 { lab=Vbp}
+N 270 -430 470 -430 { lab=vp}
+N 470 -430 470 -340 { lab=vp}
+N 450 -340 470 -340 { lab=vp}
+N 470 -340 490 -340 { lab=vp}
+N 170 -430 170 -340 { lab=vp}
+N 470 -430 540 -430 { lab=vp}
+N 540 -430 550 -430 { lab=vp}
+N 520 -370 550 -370 { lab=vp}
+N 420 -410 590 -410 { lab=Vbp}
+N 550 -340 570 -340 { lab=vp}
+N 570 -430 570 -340 { lab=vp}
+N 550 -430 570 -430 { lab=vp}
+N 550 -370 570 -370 { lab=vp}
+N 170 -340 190 -340 { lab=vp}
+N 170 -370 220 -370 { lab=vp}
+N 170 -340 170 -100 { lab=vp}
+N 550 -100 570 -100 { lab=vp}
+N 570 -340 570 -110 { lab=vp}
+N 320 -70 320 -50 { lab=vn}
+N 320 -50 420 -50 { lab=vn}
+N 420 -70 420 -50 { lab=vn}
+N 370 -50 370 60 { lab=vn}
+N 220 -70 220 -50 { lab=vp}
+N 170 -50 220 -50 { lab=vp}
+N 170 -100 170 -50 { lab=vp}
+N 520 -70 520 -50 { lab=vp}
+N 520 -50 570 -50 { lab=vp}
+N 570 -100 570 -50 { lab=vp}
+N 570 -110 570 -100 { lab=vp}
+N 470 60 640 60 { lab=vn}
+N 80 60 270 60 { lab=vn}
+N 170 -430 260 -430 { lab=vp}
+N 80 -430 170 -430 { lab=vp}
+N 320 -410 420 -410 { lab=Vbp}
+N 590 -410 850 -410 { lab=Vbp}
+N 570 -430 640 -430 { lab=vp}
 C {devices/opin.sym} 2430 -240 0 0 {name=p3 lab=iout}
-C {devices/opin.sym} 4580 -410 0 0 {name=p4 lab=Vbp}
-C {devices/opin.sym} 4450 -230 0 0 {name=p5 lab=vgate}
+C {devices/opin.sym} 4140 -410 0 0 {name=p4 lab=Vbp}
+C {devices/opin.sym} 460 -230 0 0 {name=p5 lab=vgate}
 C {madvlsi/pmos3.sym} 850 -340 1 0 {name=MP1a
 L=2
 W=5
@@ -865,7 +867,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/pmos3.sym} 4310 -340 1 0 {name=MP7a
+C {madvlsi/pmos3.sym} 320 -340 1 0 {name=MP7a
 L=2
 W=5
 body=VDD
@@ -1420,7 +1422,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/pmos3.sym} 4210 -340 1 0 {name=MDUM19
+C {madvlsi/pmos3.sym} 220 -340 1 0 {name=MDUM19
 L=2
 W=5
 body=VDD
@@ -1435,7 +1437,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/pmos4.sym} 4310 -100 3 0 {name=MPGa
+C {madvlsi/pmos4.sym} 320 -100 3 0 {name=MPGa
 L=2
 W=5
 nf=1
@@ -1449,36 +1451,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/pmos3.sym} 4410 -340 1 0 {name=MP7b
-L=2
-W=5
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/pmos4.sym} 4410 -100 3 0 {name=MPGb
-L=2
-W=5
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/pmos3.sym} 4510 -340 1 0 {name=MDUM22
+C {madvlsi/pmos3.sym} 420 -340 1 0 {name=MP7b
 L=2
 W=5
 body=VDD
@@ -1493,7 +1466,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/pmos4.sym} 4210 -100 3 0 {name=MDUM23
+C {madvlsi/pmos4.sym} 420 -100 3 0 {name=MPGb
 L=2
 W=5
 nf=1
@@ -1507,7 +1480,22 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/pmos4.sym} 4510 -100 3 0 {name=MDUM24
+C {madvlsi/pmos3.sym} 520 -340 1 0 {name=MDUM22
+L=2
+W=5
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/pmos4.sym} 220 -100 3 0 {name=MDUM23
 L=2
 W=5
 nf=1
@@ -1521,3 +1509,19 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
+C {madvlsi/pmos4.sym} 520 -100 3 0 {name=MDUM24
+L=2
+W=5
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {devices/iopin.sym} 80 -430 2 0 {name=p1 lab=vp}
+C {devices/iopin.sym} 80 60 2 0 {name=p2 lab=vn}
