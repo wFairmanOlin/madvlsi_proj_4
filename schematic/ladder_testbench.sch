@@ -174,7 +174,7 @@ C {devices/code.sym} 30 -340 0 0 {name=SPICE only_toplevel=false value="
     reset
     let run = run + 1
   end
-quit
+
 .endc"
 }
 C {madvlsi/tt_models.sym} 190 -330 0 0 {
