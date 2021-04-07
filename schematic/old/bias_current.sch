@@ -84,8 +84,6 @@ N 730 -360 880 -360 { lab=vp}
 N 850 -310 960 -310 { lab=Vbp}
 N 880 -280 880 -220 { lab=vgate}
 N 880 -220 940 -220 { lab=vgate}
-N 1040 -220 1100 -220 { lab=vgate~}
-N 1230 -220 1290 -220 { lab=vlgate}
 N 880 -100 880 -80 { lab=GND}
 N 830 -90 880 -90 { lab=GND}
 N 830 -130 830 -90 { lab=GND}
@@ -94,28 +92,6 @@ N 880 -130 900 -130 { lab=vgate}
 N 880 -220 880 -160 { lab=vgate}
 N 880 -160 900 -160 { lab=vgate}
 N 900 -160 900 -130 { lab=vgate}
-N 1040 -100 1040 -80 { lab=GND}
-N 990 -90 1040 -90 { lab=GND}
-N 990 -130 990 -90 { lab=GND}
-N 990 -130 1010 -130 { lab=GND}
-N 1040 -130 1060 -130 { lab=vgate~}
-N 1040 -160 1060 -160 { lab=vgate~}
-N 1060 -160 1060 -130 { lab=vgate~}
-N 1230 -100 1230 -80 { lab=GND}
-N 1180 -90 1230 -90 { lab=GND}
-N 1180 -130 1180 -90 { lab=GND}
-N 1180 -130 1200 -130 { lab=GND}
-N 1230 -130 1250 -130 { lab=vlgate}
-N 1230 -160 1250 -160 { lab=vlgate}
-N 1250 -160 1250 -130 { lab=vlgate}
-N 1230 -220 1230 -160 { lab=vlgate}
-N 1040 -220 1040 -160 { lab=vgate~}
-N 960 -310 1300 -310 {}
-N 1040 -280 1040 -220 {}
-N 1230 -280 1230 -220 {}
-N 1230 -360 1230 -340 {}
-N 880 -360 1230 -360 {}
-N 1040 -360 1040 -340 {}
 C {madvlsi/nmos3.sym} 120 -170 2 0 {name=M1
 L=l
 W=w
@@ -281,21 +257,16 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/code_shown.sym} 200 -560 0 0 {name=SPICE only_toplevel=false value=".param Mn=8
-.param Mp=9
-.param m = 1
-.param w=10
+C {devices/code_shown.sym} 250 -490 0 0 {name=SPICE only_toplevel=false value=".param Mn=8
+.param Mp=7
+.param m = 2
+.param w=5
 .param l=2
-*M13 NEEDS TO MATCH*
-*UNIT TRANSISTOR SIZE*
-*IN THE:* 
-*CASCODE GENERATOR*
-*AND* 
-*OUTPUT CURRENT MIRROR*"}
+"}
 C {devices/iopin.sym} 80 -360 2 0 {name=p1 lab=vp}
 C {devices/iopin.sym} 80 -40 2 0 {name=p2 lab=vn}
 C {devices/opin.sym} 790 -260 0 0 {name=p3 lab=iout}
-C {devices/opin.sym} 1300 -310 0 0 {name=p4 lab=Vbp}
+C {devices/opin.sym} 960 -310 0 0 {name=p4 lab=Vbp}
 C {madvlsi/pmos3.sym} 730 -310 0 0 {name=M14
 L=l
 W=w
@@ -327,13 +298,11 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/opin.sym} 940 -220 0 0 {name=p6 lab=vgate}
-C {devices/opin.sym} 1100 -220 0 0 {name=p7 lab=vgate~}
-C {devices/opin.sym} 1290 -220 0 0 {name=p8 lab=vlgate}
 C {madvlsi/pmos4.sym} 880 -130 0 0 {name=M13
 L=2
-W=10
+W=5
 nf=1
-mult=6
+mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -344,63 +313,3 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/gnd.sym} 880 -80 0 0 {name=l3 lab=GND}
-C {madvlsi/pmos4.sym} 1040 -130 0 0 {name=M15
-L=2
-W=10
-nf=1
-mult=6
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/gnd.sym} 1040 -80 0 0 {name=l1 lab=GND}
-C {madvlsi/pmos4.sym} 1230 -130 0 0 {name=M16
-L=2
-W=10
-nf=1
-mult=6
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/gnd.sym} 1230 -80 0 0 {name=l2 lab=GND}
-C {madvlsi/pmos3.sym} 1040 -310 0 0 {name=M17
-L=l
-W=w
-body=VDD
-nf=1
-mult=m
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/pmos3.sym} 1230 -310 0 0 {name=M18
-L=l
-W=w
-body=VDD
-nf=1
-mult=m
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
