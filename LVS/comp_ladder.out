@@ -1,0 +1,18 @@
+Equate elements:  no current cell.
+Equate elements:  no current cell.
+Class ladder_buffer_LDS.spice:  Merged 1 devices.
+Class ladder_2.spice:  Merged 1 devices.
+
+Subcircuit summary:
+Circuit 1: ladder_buffer_LDS.spice         |Circuit 2: ladder_2.spice                  
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (52)               |sky130_fd_pr__nfet_01v8 (52)               
+sky130_fd_pr__pfet_01v8 (14)               |sky130_fd_pr__pfet_01v8 (14)               
+Number of devices: 66                      |Number of devices: 66                      
+Number of nets: 41                         |Number of nets: 41                         
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes ladder_buffer_LDS.spice and ladder_2.spice are equivalent.
+Circuits match uniquely.
