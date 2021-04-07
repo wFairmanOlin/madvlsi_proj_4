@@ -164,7 +164,7 @@ C {devices/code.sym} 30 -340 0 0 {name=SPICE only_toplevel=false value="
       alter V6 $&b6
       save all
       op
-      wrdata ~/Documents/madvlsi_proj_4/data/mc_dac\{$&run\}.txt i(VloutI) i(VldumpI) v(Vin) v(Vgate) v(D0) i(VinI) i(VgateI) v(VloutV) v(VldumpV) i(Vout) i(Vdump)
+      wrdata ~/Desktop/madvlsi/madvlsi_proj_4/data/dac\{$&run\}.txt i(VloutI) i(VldumpI) v(Vin) v(Vgate) v(D0) i(VinI) i(VgateI) v(VloutV) v(VldumpV) i(Vout) i(Vdump)
       if code eq 0
         set appendwrite
         set wr_vecnames = FALSE

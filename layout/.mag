@@ -1,0 +1,8 @@
+magic
+tech sky130A
+timestamp 1617768613
+use bias_current  bias_current_0
+timestamp 1617754746
+transform 1 0 1520 0 1 710
+box -1520 -710 10575 1350
+<< end >>

@@ -1,0 +1,167 @@
+Equate elements:  no current cell.
+Equate elements:  no current cell.
+
+Cell iout_mirror_LDS disconnected node: VP
+Cell iout_mirror_LDS disconnected node: VN
+Class iout_mirror_LDS:  Merged 16 devices.
+Class iout_mirror_LDS:  Merged 16 devices.
+
+Cell iout_mirror_LDS disconnected node: VP
+Cell iout_mirror_LDS disconnected node: VN
+
+Subcircuit summary:
+Circuit 1: iout_mirror_LDS                 |Circuit 2: iout_mirror_LDS                 
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (33)               |sky130_fd_pr__pfet_01v8 (33)               
+sky130_fd_pr__nfet_01v8 (19)               |sky130_fd_pr__nfet_01v8 (19)               
+Number of devices: 52                      |Number of devices: 52                      
+Number of nets: 43                         |Number of nets: 43                         
+---------------------------------------------------------------------------------------
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match uniquely.
+Circuits match correctly.
+
+Subcircuit pins:
+Circuit 1: iout_mirror_LDS                 |Circuit 2: iout_mirror_LDS                 
+-------------------------------------------|-------------------------------------------
+Iout                                       |Iout                                       
+Vcn                                        |Vcn                                        
+VN                                         |GND **Mismatch**                           
+VP                                         |VDD **Mismatch**                           
+Vbp                                        |Vbp                                        
+Iin                                        |Iin                                        
+(no matching pin)                          |VP                                         
+(no matching pin)                          |VN                                         
+---------------------------------------------------------------------------------------
+Cell pin lists for iout_mirror_LDS and iout_mirror_LDS altered to match.
+
+Cell cascode_generator_LDS disconnected node: Vp
+Cell cascode_generator_LDS disconnected node: Vn
+Class cascode_generator_LDS:  Merged 12 devices.
+Class cascode_generator_LDS:  Merged 12 devices.
+
+Cell cascode_generator_LDS disconnected node: Vp
+Cell cascode_generator_LDS disconnected node: Vn
+
+Subcircuit summary:
+Circuit 1: cascode_generator_LDS           |Circuit 2: cascode_generator_LDS           
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (12)               |sky130_fd_pr__pfet_01v8 (12)               
+sky130_fd_pr__nfet_01v8 (4)                |sky130_fd_pr__nfet_01v8 (4)                
+Number of devices: 16                      |Number of devices: 16                      
+Number of nets: 14                         |Number of nets: 14                         
+---------------------------------------------------------------------------------------
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match uniquely.
+Circuits match correctly.
+
+Subcircuit pins:
+Circuit 1: cascode_generator_LDS           |Circuit 2: cascode_generator_LDS           
+-------------------------------------------|-------------------------------------------
+Vcn                                        |Vcn                                        
+Vbp                                        |Vbp                                        
+VN                                         |GND **Mismatch**                           
+VP                                         |VDD **Mismatch**                           
+(no matching pin)                          |Vp                                         
+(no matching pin)                          |Vn                                         
+---------------------------------------------------------------------------------------
+Cell pin lists for cascode_generator_LDS and cascode_generator_LDS altered to match.
+
+Cell bias_current_LDS disconnected node: vp
+Cell bias_current_LDS disconnected node: vn
+Class bias_current_LDS:  Merged 51 devices.
+Class bias_current_LDS:  Merged 51 devices.
+
+Cell bias_current_LDS disconnected node: vp
+Cell bias_current_LDS disconnected node: vn
+
+Subcircuit summary:
+Circuit 1: bias_current_LDS                |Circuit 2: bias_current_LDS                
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (15)               |sky130_fd_pr__pfet_01v8 (15)               
+sky130_fd_pr__nfet_01v8 (10)               |sky130_fd_pr__nfet_01v8 (10)               
+Number of devices: 25                      |Number of devices: 25                      
+Number of nets: 10                         |Number of nets: 10                         
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: bias_current_LDS                |Circuit 2: bias_current_LDS                
+-------------------------------------------|-------------------------------------------
+iout                                       |iout                                       
+vg                                         |vgate **Mismatch**                         
+vn                                         |GND **Mismatch**                           
+vbp                                        |Vbp                                        
+vp                                         |VDD **Mismatch**                           
+(no matching pin)                          |vp                                         
+(no matching pin)                          |vn                                         
+---------------------------------------------------------------------------------------
+Cell pin lists for bias_current_LDS and bias_current_LDS altered to match.
+
+Cell ladder_buffer_LDS4 disconnected node: XXX
+Cell ladder_buffer_LDS4 disconnected node: XXX
+Cell ladder_buffer_LDS4 disconnected node: XXX
+Cell ladder_buffer_LDS4 disconnected node: XXX
+Cell ladder_buffer_LDS4 disconnected node: vn
+Class ladder_buffer_LDS4:  Merged 1 devices.
+Class ladder_buffer_LDS4:  Merged 1 devices.
+
+Cell ladder_buffer_LDS4 disconnected node: XXX
+Cell ladder_buffer_LDS4 disconnected node: XXX
+Cell ladder_buffer_LDS4 disconnected node: XXX
+Cell ladder_buffer_LDS4 disconnected node: XXX
+Cell ladder_buffer_LDS4 disconnected node: vn
+
+Subcircuit summary:
+Circuit 1: ladder_buffer_LDS4              |Circuit 2: ladder_buffer_LDS4              
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (14)               |sky130_fd_pr__pfet_01v8 (14)               
+sky130_fd_pr__nfet_01v8 (52)               |sky130_fd_pr__nfet_01v8 (52)               
+Number of devices: 66                      |Number of devices: 66                      
+Number of nets: 41                         |Number of nets: 41                         
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: ladder_buffer_LDS4              |Circuit 2: ladder_buffer_LDS4              
+-------------------------------------------|-------------------------------------------
+Iout                                       |iout                                       
+Idump                                      |idump                                      
+vg                                         |vg                                         
+D6                                         |d6                                         
+D0                                         |d0                                         
+D5                                         |d5                                         
+D2                                         |d2                                         
+D3                                         |d3                                         
+D1                                         |d1                                         
+D4                                         |d4                                         
+Iin                                        |Iin                                        
+vn                                         |GND **Mismatch**                           
+vp                                         |vp                                         
+(no matching pin)                          |XXX                                        
+(no matching pin)                          |XXX                                        
+(no matching pin)                          |XXX                                        
+(no matching pin)                          |XXX                                        
+(no matching pin)                          |vn                                         
+---------------------------------------------------------------------------------------
+Cell pin lists for ladder_buffer_LDS4 and ladder_buffer_LDS4 altered to match.
+
+Subcircuit summary:
+Circuit 1: dac.spice                       |Circuit 2: dac_LDS.spice                   
+-------------------------------------------|-------------------------------------------
+iout_mirror_LDS (2)                        |iout_mirror_LDS (2)                        
+cascode_generator_LDS (1)                  |cascode_generator_LDS (1)                  
+bias_current_LDS (1)                       |bias_current_LDS (1)                       
+ladder_buffer_LDS4 (1)                     |ladder_buffer_LDS4 (1)                     
+Number of devices: 5                       |Number of devices: 5                       
+Number of nets: 17                         |Number of nets: 17                         
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes dac.spice and dac_LDS.spice are equivalent.
+Circuits match uniquely.

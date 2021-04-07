@@ -1,0 +1,497 @@
+timestamp 1617774610
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use cascode_generator cascode_generator_0 1 0 19810 0 1 3330
+use bias_current bias_current_0 1 0 -960 0 1 5900
+use iout_mirror iout_mirror_0 1 0 30470 0 1 3900
+use iout_mirror iout_mirror_1 1 0 54670 0 1 3900
+use ladder_2 ladder_2_0 1 0 400 0 1 3060
+node "m2_53710_6490#" 1 820.18 53710 6490 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 267200 3660 0 0 0 0 0 0 0 0
+node "m1_1870_3680#" 0 95116.9 1870 3680 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 100335600 146340 0 0 0 0 0 0 0 0 0 0
+node "m1_53670_6490#" 0 151.76 53670 6490 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 32000 720 0 0 0 0 0 0 0 0 0 0
+node "li_1700_4180#" 16 2358.65 1700 4180 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6400 320 19600 560 697600 9040 0 0 0 0 0 0 0 0
+node "li_54910_6530#" 14 1020.66 54910 6530 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6400 320 6400 320 267200 3660 0 0 0 0 0 0 0 0
+node "li_53710_6490#" 12 199.68 53710 6490 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25600 640 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_70620_4050#" 75 1847.72 70620 4050 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 64000 1440 28800 920 432000 5720 0 0 0 0 0 0 0 0
+node "a_64640_2180#" 278 3042.74 64640 2180 pc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6400 320 0 0 403200 5680 32000 960 2174400 27500 0 0 0 0 0 0 0 0
+node "a_1420_4140#" 126 11157.5 1420 4140 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25600 640 0 0 32000 960 2062400 26420 1294700 16960 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "li_70620_4050#" "m1_1870_3680#" 70
+cap "a_64640_2180#" "m2_53710_6490#" 437.5
+cap "m1_53670_6490#" "m2_53710_6490#" 177.76
+cap "li_53710_6490#" "m2_53710_6490#" 17.6
+cap "a_64640_2180#" "m1_1870_3680#" 14963.1
+cap "a_1420_4140#" "m1_1870_3680#" 23.2759
+cap "li_1700_4180#" "m1_1870_3680#" 105
+cap "a_64640_2180#" "m1_53670_6490#" 92
+cap "m1_53670_6490#" "li_53710_6490#" 100.96
+cap "a_1420_4140#" "li_1700_4180#" 5410.75
+cap "ladder_2_0/vn" "a_1420_4140#" 676.5
+cap "ladder_2_0/vn" "a_1420_4140#" 630
+cap "ladder_2_0/vn" "a_1420_4140#" 630
+cap "a_1420_4140#" "ladder_2_0/vn" 630
+cap "a_1420_4140#" "ladder_2_0/vn" 630
+cap "ladder_2_0/vn" "a_1420_4140#" 630
+cap "a_1420_4140#" "ladder_2_0/vn" 630
+cap "a_1420_4140#" "ladder_2_0/vn" 630
+cap "a_1420_4140#" "ladder_2_0/vn" 630
+cap "ladder_2_0/vp" "ladder_2_0/vn" 531
+cap "ladder_2_0/a_9600_n2030#" "ladder_2_0/vp" -197.29
+cap "ladder_2_0/vn" "a_1420_4140#" 805
+subcap "a_64640_2180#" -2472.43
+subcap "a_64640_2180#" -2059.33
+cap "ladder_2_0/vn" "ladder_2_0/Iout" 274.52
+cap "bias_current_0/vn" "ladder_2_0/vn" 11.5385
+cap "a_1420_4140#" "ladder_2_0/vn" 946.75
+subcap "m1_1870_3680#" -93964.7
+subcap "li_1700_4180#" -2458.64
+subcap "a_1420_4140#" -11020
+cap "ladder_2_0/vg" "ladder_2_0/vn" 273.1
+cap "ladder_2_0/vg" "ladder_2_0/Iin" 9.625
+subcap "m1_1870_3680#" -94830.2
+subcap "li_1700_4180#" -2116.78
+subcap "a_1420_4140#" -10791
+cap "ladder_2_0/Iin" "ladder_2_0/vg" 90.625
+cap "ladder_2_0/vn" "ladder_2_0/Iin" 513.68
+cap "ladder_2_0/vn" "ladder_2_0/vg" 110.15
+cap "ladder_2_0/vn" "ladder_2_0/vn" 96.05
+cap "ladder_2_0/vn" "ladder_2_0/Iin" 540.93
+cap "ladder_2_0/vg" "ladder_2_0/vn" 109.68
+cap "ladder_2_0/vn" "ladder_2_0/vn" 34
+cap "ladder_2_0/vn" "ladder_2_0/vg" 68
+cap "ladder_2_0/vn" "ladder_2_0/vg" 119
+cap "ladder_2_0/vn" "ladder_2_0/Iin" 585.309
+cap "ladder_2_0/vg" "ladder_2_0/vn" 109.68
+cap "ladder_2_0/Iin" "ladder_2_0/vn" 303.879
+cap "ladder_2_0/vn" "ladder_2_0/vg" 34
+cap "ladder_2_0/vn" "ladder_2_0/vg" 159.405
+cap "ladder_2_0/vn" "ladder_2_0/vg" 204.18
+cap "ladder_2_0/vg" "ladder_2_0/vn" 119
+cap "ladder_2_0/vn" "ladder_2_0/vg" 246.73
+cap "ladder_2_0/a_9400_0#" "ladder_2_0/vn" 64.3214
+cap "ladder_2_0/vn" "ladder_2_0/vn" 119
+cap "ladder_2_0/vn" "ladder_2_0/a_9400_0#" 121.105
+cap "ladder_2_0/vn" "ladder_2_0/vg" 109.68
+cap "ladder_2_0/vn" "ladder_2_0/vn" 119
+cap "ladder_2_0/vn" "ladder_2_0/vg" 109.68
+cap "ladder_2_0/vn" "ladder_2_0/a_9400_0#" 82.43
+cap "ladder_2_0/vn" "ladder_2_0/vg" 122.18
+cap "ladder_2_0/vn" "ladder_2_0/vn" 17
+cap "ladder_2_0/a_9400_0#" "ladder_2_0/vn" 138.189
+cap "ladder_2_0/a_9400_0#" "ladder_2_0/vn" 82.43
+cap "ladder_2_0/vn" "ladder_2_0/vg" 109.68
+cap "ladder_2_0/vg" "ladder_2_0/vn" 119
+cap "ladder_2_0/vn" "ladder_2_0/vg" 141.28
+cap "ladder_2_0/vn" "ladder_2_0/a_9400_0#" -18.29
+cap "ladder_2_0/vg" "ladder_2_0/vn" 51
+cap "ladder_2_0/vn" "ladder_2_0/vg" 323.18
+cap "ladder_2_0/a_19000_0#" "ladder_2_0/vn" 92.78
+cap "ladder_2_0/vn" "ladder_2_0/vn" 17
+cap "ladder_2_0/vg" "ladder_2_0/vn" 178.53
+cap "ladder_2_0/vn" "ladder_2_0/vg" 85
+cap "ladder_2_0/vn" "ladder_2_0/vn" 119
+cap "ladder_2_0/vn" "ladder_2_0/vg" 109.68
+cap "ladder_2_0/a_19000_0#" "ladder_2_0/vn" 86.105
+cap "ladder_2_0/vg" "ladder_2_0/vn" 109.68
+cap "ladder_2_0/vn" "ladder_2_0/a_19000_0#" 82.43
+cap "ladder_2_0/vn" "ladder_2_0/vn" 119
+cap "ladder_2_0/vg" "ladder_2_0/vn" 139.18
+cap "ladder_2_0/a_19000_0#" "ladder_2_0/vn" 82.43
+cap "ladder_2_0/vn" "ladder_2_0/vg" 119
+cap "ladder_2_0/vn" "ladder_2_0/a_19000_0#" 82.43
+cap "ladder_2_0/vn" "ladder_2_0/vg" 109.68
+cap "ladder_2_0/vg" "ladder_2_0/vn" 34
+cap "ladder_2_0/a_19000_0#" "ladder_2_0/vn" -56.99
+cap "ladder_2_0/vn" "ladder_2_0/vg" 185.73
+cap "ladder_2_0/vg" "ladder_2_0/vn" 119
+cap "ladder_2_0/vg" "ladder_2_0/vn" 204.18
+cap "ladder_2_0/vn" "ladder_2_0/vn" 34
+cap "ladder_2_0/vg" "ladder_2_0/vn" 68
+cap "ladder_2_0/a_28600_0#" "ladder_2_0/vn" 131.48
+cap "ladder_2_0/vg" "ladder_2_0/vn" 165.03
+cap "ladder_2_0/a_28600_0#" "ladder_2_0/vn" 82.43
+cap "ladder_2_0/vn" "ladder_2_0/vn" 119
+cap "ladder_2_0/vn" "ladder_2_0/vg" 109.68
+cap "ladder_2_0/a_28600_0#" "ladder_2_0/vn" 82.43
+cap "ladder_2_0/vn" "ladder_2_0/vn" 102
+cap "ladder_2_0/vn" "ladder_2_0/vg" 97.98
+cap "ladder_2_0/vn" "ladder_2_0/a_28600_0#" 82.43
+cap "ladder_2_0/vn" "ladder_2_0/vg" 77.095
+cap "ladder_2_0/vn" "ladder_2_0/vg" 109.68
+cap "ladder_2_0/vn" "ladder_2_0/a_28600_0#" 15.93
+cap "ladder_2_0/vn" "ladder_2_0/vg" 119
+cap "ladder_2_0/a_28600_0#" "ladder_2_0/vn" -95.69
+cap "ladder_2_0/vg" "ladder_2_0/vn" 216.23
+cap "ladder_2_0/vn" "ladder_2_0/vg" 17
+cap "ladder_2_0/vn" "ladder_2_0/vg" 204.18
+cap "ladder_2_0/vg" "ladder_2_0/vn" 119
+cap "ladder_2_0/vn" "ladder_2_0/vg" 51
+cap "ladder_2_0/vg" "ladder_2_0/vn" 151.53
+cap "ladder_2_0/vn" "ladder_2_0/a_38200_0#" 170.18
+cap "ladder_2_0/vn" "ladder_2_0/vn" 51
+cap "ladder_2_0/vn" "ladder_2_0/vn" 119
+cap "ladder_2_0/vn" "ladder_2_0/vg" 109.68
+cap "ladder_2_0/vn" "ladder_2_0/a_38200_0#" 82.43
+cap "ladder_2_0/vn" "ladder_2_0/vg" 70.38
+cap "ladder_2_0/vn" "ladder_2_0/a_38200_0#" 82.43
+cap "ladder_2_0/vn" "ladder_2_0/vn" 85
+cap "ladder_2_0/vn" "ladder_2_0/a_38200_0#" 82.43
+cap "ladder_2_0/vn" "ladder_2_0/vg" 228.68
+cap "ladder_2_0/vn" "ladder_2_0/a_38200_0#" 49.18
+cap "ladder_2_0/vn" "ladder_2_0/vg" 119
+cap "ladder_2_0/vn" "ladder_2_0/vg" 109.68
+cap "ladder_2_0/vn" "ladder_2_0/a_38200_0#" -132.455
+cap "ladder_2_0/vn" "ladder_2_0/vg" 246.055
+cap "ladder_2_0/vn" "ladder_2_0/vg" 204.18
+cap "ladder_2_0/vg" "ladder_2_0/vn" 119
+cap "ladder_2_0/vn" "ladder_2_0/a_47800_0#" 208.88
+cap "ladder_2_0/vn" "ladder_2_0/vg" 138.03
+cap "ladder_2_0/vg" "ladder_2_0/vn" 34
+cap "ladder_2_0/vn" "ladder_2_0/vn" 68
+cap "ladder_2_0/vn" "ladder_2_0/vn" 119
+cap "ladder_2_0/vn" "ladder_2_0/vg" 109.68
+cap "ladder_2_0/vn" "ladder_2_0/a_47800_0#" 82.43
+cap "ladder_2_0/vg" "ladder_2_0/vn" 87.38
+cap "ladder_2_0/a_47800_0#" "ladder_2_0/vn" 82.43
+cap "ladder_2_0/vn" "ladder_2_0/vn" 68
+cap "ladder_2_0/vn" "ladder_2_0/a_47800_0#" 82.43
+cap "ladder_2_0/vg" "ladder_2_0/vn" 228.68
+cap "ladder_2_0/vg" "ladder_2_0/vn" 102
+cap "ladder_2_0/vg" "ladder_2_0/vn" 110.355
+cap "ladder_2_0/a_47800_0#" "ladder_2_0/vn" 99.745
+cap "ladder_2_0/vn" "ladder_2_0/vg" 275.88
+cap "ladder_2_0/vg" "ladder_2_0/vn" 119
+cap "ladder_2_0/vg" "ladder_2_0/vn" 204.18
+cap "ladder_2_0/vn" "ladder_2_0/vg" 124.53
+cap "ladder_2_0/vn" "ladder_2_0/a_57400_0#" 247.58
+cap "ladder_2_0/vg" "ladder_2_0/vn" 17
+cap "ladder_2_0/vn" "ladder_2_0/vn" 85
+cap "ladder_2_0/a_57400_0#" "ladder_2_0/vn" 82.43
+cap "ladder_2_0/vn" "ladder_2_0/vn" 119
+cap "ladder_2_0/vg" "ladder_2_0/vn" 109.68
+cap "ladder_2_0/vg" "ladder_2_0/vn" 104.38
+cap "ladder_2_0/vn" "ladder_2_0/vn" 51
+cap "ladder_2_0/a_57400_0#" "ladder_2_0/vn" 82.43
+cap "ladder_2_0/vg" "ladder_2_0/vn" 119
+cap "ladder_2_0/vn" "ladder_2_0/vg" 109.68
+cap "ladder_2_0/vn" "ladder_2_0/a_57400_0#" 82.43
+cap "ladder_2_0/vn" "ladder_2_0/vg" 85
+cap "ladder_2_0/a_57400_0#" "a_64640_2180#" 88.7857
+cap "ladder_2_0/vn" "ladder_2_0/vg" -11.345
+cap "ladder_2_0/vn" "ladder_2_0/a_57400_0#" 61.045
+cap "a_64640_2180#" "ladder_2_0/vn" 871.64
+cap "a_64640_2180#" "ladder_2_0/vg" 1083.52
+cap "ladder_2_0/vn" "ladder_2_0/vg" 54.28
+cap "a_64640_2180#" "ladder_2_0/a_57400_0#" 88.7857
+cap "ladder_2_0/vn" "ladder_2_0/vg" 172.73
+cap "ladder_2_0/vn" "ladder_2_0/vg" 119
+cap "ladder_2_0/vg" "ladder_2_0/vn" 15.8675
+cap "ladder_2_0/vg" "ladder_2_0/vn" 119
+subcap "li_70620_4050#" -1671.4
+cap "ladder_2_0/Idump" "ladder_2_0/vn" 170.4
+cap "ladder_2_0/vg" "ladder_2_0/vn" 28.05
+cap "bias_current_0/vg" "bias_current_0/vn" 38.4
+cap "bias_current_0/iout" "bias_current_0/vn" 683.585
+cap "ladder_2_0/vn" "bias_current_0/vn" 11.5385
+cap "li_1700_4180#" "bias_current_0/vn" 715.125
+subcap "li_1700_4180#" -1911.53
+subcap "a_1420_4140#" -10604
+cap "ladder_2_0/vg" "bias_current_0/vn" 115.809
+cap "ladder_2_0/Iin" "bias_current_0/vn" 641.425
+cap "ladder_2_0/Iin" "ladder_2_0/vg" 12.375
+subcap "li_1700_4180#" -1947.01
+subcap "a_1420_4140#" -10534.5
+cap "bias_current_0/vn" "ladder_2_0/Iin" 510.543
+cap "ladder_2_0/vg" "ladder_2_0/vn" -146.364
+cap "ladder_2_0/vg" "ladder_2_0/Iin" 137.375
+cap "ladder_2_0/vg" "bias_current_0/vn" 119.55
+cap "bias_current_0/vn" "ladder_2_0/Iin" 700.53
+cap "ladder_2_0/vg" "bias_current_0/vn" 109.68
+cap "bias_current_0/vn" "ladder_2_0/Iin" 836.004
+cap "bias_current_0/vn" "ladder_2_0/vg" 109.68
+cap "ladder_2_0/Iin" "bias_current_0/vn" 451.717
+cap "bias_current_0/vn" "ladder_2_0/vg" 144.455
+cap "bias_current_0/vn" "ladder_2_0/vg" 267.18
+cap "bias_current_0/vn" "ladder_2_0/a_9400_0#" 94.15
+cap "bias_current_0/vn" "ladder_2_0/vg" 243.455
+cap "ladder_2_0/a_9400_0#" "bias_current_0/vn" 539.705
+cap "ladder_2_0/vg" "bias_current_0/vn" 188.43
+cap "ladder_2_0/a_9400_0#" "bias_current_0/vn" 501.03
+cap "ladder_2_0/vg" "bias_current_0/vn" 188.43
+cap "bias_current_0/vn" "ladder_2_0/a_9400_0#" 635.78
+cap "bias_current_0/vn" "ladder_2_0/vg" 171.43
+cap "bias_current_0/vn" "ladder_2_0/a_9400_0#" 501.03
+cap "ladder_2_0/vg" "bias_current_0/vn" 188.43
+cap "ladder_2_0/vg" "bias_current_0/vn" 206.305
+cap "ladder_2_0/a_9400_0#" "bias_current_0/vn" 176.43
+cap "bias_current_0/vn" "ladder_2_0/vg" 267.18
+cap "cascode_generator_0/VN" "ladder_2_0/vg" 245.805
+cap "cascode_generator_0/VN" "ladder_2_0/a_19000_0#" 167.9
+cap "ladder_2_0/vg" "cascode_generator_0/VN" 188.43
+cap "cascode_generator_0/VN" "ladder_2_0/a_19000_0#" 504.705
+cap "cascode_generator_0/VN" "cascode_generator_0/a_1220_3790#" -36.9
+cap "cascode_generator_0/a_2020_1570#" "cascode_generator_0/VN" -8.2
+cap "cascode_generator_0/VN" "cascode_generator_0/VN" -125.097
+cap "cascode_generator_0/VN" "ladder_2_0/vg" 188.43
+cap "cascode_generator_0/Vcn" "cascode_generator_0/VN" -8.2
+cap "cascode_generator_0/Vcn" "cascode_generator_0/VN" -36.9
+cap "ladder_2_0/a_19000_0#" "cascode_generator_0/VN" 501.03
+cap "cascode_generator_0/a_1220_3790#" "cascode_generator_0/VN" -5.745
+cap "cascode_generator_0/a_1220_3790#" "cascode_generator_0/VN" -2.455
+cap "ladder_2_0/a_19000_0#" "cascode_generator_0/VN" 501.03
+cap "cascode_generator_0/a_1220_3790#" "cascode_generator_0/VN" -8.2
+cap "cascode_generator_0/VN" "ladder_2_0/vg" 171.43
+cap "cascode_generator_0/a_2020_1570#" "cascode_generator_0/VN" -8.2
+cap "cascode_generator_0/VN" "cascode_generator_0/a_1220_3790#" -36.9
+cap "cascode_generator_0/VN" "cascode_generator_0/a_1220_3790#" -34.85
+cap "cascode_generator_0/a_1220_3790#" "cascode_generator_0/VN" -36.9
+cap "ladder_2_0/a_19000_0#" "cascode_generator_0/VN" 501.03
+cap "cascode_generator_0/a_1220_3790#" "cascode_generator_0/VN" -36.9
+cap "cascode_generator_0/a_1220_3790#" "cascode_generator_0/VN" -130.285
+cap "ladder_2_0/vg" "cascode_generator_0/VN" 188.43
+cap "cascode_generator_0/a_2020_1570#" "cascode_generator_0/VN" -8.2
+cap "cascode_generator_0/VN" "cascode_generator_0/a_1220_3790#" -8.2
+cap "cascode_generator_0/VN" "cascode_generator_0/a_1220_3790#" -36.9
+cap "ladder_2_0/vg" "cascode_generator_0/VN" 220.955
+cap "ladder_2_0/a_19000_0#" "cascode_generator_0/VN" 77.93
+cap "cascode_generator_0/VN" "cascode_generator_0/a_2020_1570#" -8.2
+cap "cascode_generator_0/VN" "cascode_generator_0/a_1220_3790#" -36.9
+cap "cascode_generator_0/a_1220_3790#" "cascode_generator_0/VN" -34.85
+cap "cascode_generator_0/VN" "ladder_2_0/vg" 267.18
+cap "cascode_generator_0/VN" "cascode_generator_0/a_1220_3790#" -36.9
+cap "cascode_generator_0/a_1220_3790#" "cascode_generator_0/VN" -130.285
+cap "cascode_generator_0/VN" "cascode_generator_0/a_1220_3790#" -38.85
+cap "cascode_generator_0/VN" "cascode_generator_0/a_1220_3790#" -8.2
+cap "cascode_generator_0/VN" "cascode_generator_0/a_2020_1570#" -8.2
+cap "cascode_generator_0/VN" "ladder_2_0/vg" 234.555
+cap "cascode_generator_0/VN" "cascode_generator_0/Vcn" -8.2
+cap "cascode_generator_0/VN" "ladder_2_0/a_28600_0#" 266.4
+cap "cascode_generator_0/VN" "cascode_generator_0/a_1220_3790#" -126.285
+cap "cascode_generator_0/VN" "cascode_generator_0/a_2020_1570#" -8.2
+cap "cascode_generator_0/Vcn" "cascode_generator_0/VN" -36.9
+cap "ladder_2_0/a_28600_0#" "cascode_generator_0/VN" 501.03
+cap "iout_mirror_0/a_400_1000#" "cascode_generator_0/VN" -4.805
+cap "ladder_2_0/vg" "cascode_generator_0/VN" 188.43
+cap "iout_mirror_0/VN" "iout_mirror_0/Vcn" -36.9
+cap "iout_mirror_0/VN" "iout_mirror_0/a_400_1000#" -3.395
+cap "iout_mirror_0/VN" "iout_mirror_0/a_400_1000#" -36.9
+cap "iout_mirror_0/VN" "ladder_2_0/a_28600_0#" 501.03
+cap "ladder_2_0/vg" "iout_mirror_0/VN" 187.58
+cap "iout_mirror_0/VN" "iout_mirror_0/Iin" -8.2
+cap "iout_mirror_0/VN" "iout_mirror_0/Vcn" -36.9
+cap "iout_mirror_0/VN" "ladder_2_0/vg" 175.68
+cap "iout_mirror_0/a_400_1000#" "iout_mirror_0/VN" -36.9
+cap "iout_mirror_0/Iout" "iout_mirror_0/VN" -4.805
+cap "iout_mirror_0/VN" "iout_mirror_0/net1" -8.2
+cap "ladder_2_0/a_28600_0#" "iout_mirror_0/VN" 501.03
+cap "ladder_2_0/a_28600_0#" "iout_mirror_0/VN" 434.53
+cap "iout_mirror_0/a_400_1000#" "iout_mirror_0/VN" -36.9
+cap "iout_mirror_0/Iout" "iout_mirror_0/VN" -3.395
+cap "iout_mirror_0/Vcn" "iout_mirror_0/VN" -36.9
+cap "iout_mirror_0/VN" "ladder_2_0/vg" 188.43
+cap "iout_mirror_0/net3" "iout_mirror_0/VN" -8.2
+cap "ladder_2_0/a_28600_0#" "iout_mirror_0/VN" -20.57
+cap "ladder_2_0/vg" "iout_mirror_0/VN" 232.205
+cap "iout_mirror_0/a_400_1000#" "iout_mirror_0/VN" -4.805
+cap "iout_mirror_0/Iin" "iout_mirror_0/VN" -8.2
+cap "iout_mirror_0/Vcn" "iout_mirror_0/VN" -36.9
+cap "iout_mirror_0/a_400_1000#" "iout_mirror_0/VN" -36.9
+cap "iout_mirror_0/Vcn" "iout_mirror_0/VN" -36.9
+cap "iout_mirror_0/VN" "iout_mirror_0/a_400_1000#" -3.395
+cap "iout_mirror_0/VN" "iout_mirror_0/a_400_1000#" -36.9
+cap "ladder_2_0/vg" "iout_mirror_0/VN" 267.18
+cap "iout_mirror_0/VN" "iout_mirror_0/Iin" -8.2
+cap "iout_mirror_0/VN" "iout_mirror_0/net4" -8.2
+cap "iout_mirror_0/VN" "iout_mirror_0/a_400_1000#" -36.9
+cap "iout_mirror_0/VN" "ladder_2_0/vg" 223.305
+cap "iout_mirror_0/VN" "iout_mirror_0/Iout" -4.805
+cap "iout_mirror_0/VN" "ladder_2_0/a_38200_0#" 364.9
+cap "iout_mirror_0/VN" "iout_mirror_0/Vcn" -36.9
+cap "iout_mirror_0/net5" "iout_mirror_0/VN" -8.2
+cap "iout_mirror_0/Iout" "iout_mirror_0/VN" -3.395
+cap "iout_mirror_0/Vcn" "iout_mirror_0/VN" -36.9
+cap "ladder_2_0/vg" "iout_mirror_0/VN" 188.43
+cap "iout_mirror_0/a_400_1000#" "iout_mirror_0/VN" -36.9
+cap "ladder_2_0/a_38200_0#" "iout_mirror_0/VN" 501.03
+cap "iout_mirror_0/VN" "iout_mirror_0/a_400_1000#" -36.9
+cap "iout_mirror_0/VN" "iout_mirror_0/Iin" -8.2
+cap "iout_mirror_0/VN" "ladder_2_0/vg" 174.83
+cap "iout_mirror_0/VN" "iout_mirror_0/a_400_1000#" -4.805
+cap "iout_mirror_0/VN" "ladder_2_0/a_38200_0#" 501.03
+cap "iout_mirror_0/VN" "iout_mirror_0/Vcn" -36.9
+cap "iout_mirror_0/Iin" "iout_mirror_0/VN" -8.2
+cap "ladder_2_0/a_38200_0#" "iout_mirror_0/VN" 501.03
+cap "iout_mirror_0/a_400_1000#" "iout_mirror_0/VN" -36.9
+cap "ladder_2_0/vg" "iout_mirror_0/VN" 188.43
+cap "iout_mirror_0/a_400_1000#" "iout_mirror_0/VN" -3.395
+cap "iout_mirror_0/Vcn" "iout_mirror_0/VN" -36.9
+cap "iout_mirror_0/a_400_1000#" "iout_mirror_0/VN" -36.9
+cap "iout_mirror_0/VN" "ladder_2_0/a_38200_0#" 467.78
+cap "iout_mirror_0/VN" "iout_mirror_0/net6" -8.2
+cap "iout_mirror_0/VN" "ladder_2_0/vg" 188.43
+cap "iout_mirror_0/VN" "iout_mirror_0/Iout" -4.805
+cap "iout_mirror_0/VN" "iout_mirror_0/Vcn" -36.9
+cap "iout_mirror_0/Vcn" "iout_mirror_0/VN" -36.9
+cap "iout_mirror_0/net7" "iout_mirror_0/VN" -8.2
+cap "iout_mirror_0/Iout" "iout_mirror_0/VN" -3.395
+cap "iout_mirror_0/VN" "iout_mirror_0/a_400_1000#" -36.9
+cap "iout_mirror_0/VN" "ladder_2_0/vg" 242.892
+cap "iout_mirror_0/VN" "ladder_2_0/a_38200_0#" -117.645
+cap "iout_mirror_0/VN" "iout_mirror_0/Iin" -8.2
+cap "iout_mirror_0/VN" "ladder_2_0/vg" 267.18
+cap "iout_mirror_0/a_400_1000#" "iout_mirror_0/VN" -36.9
+cap "iout_mirror_0/VN" "iout_mirror_0/a_400_1000#" -4.805
+cap "iout_mirror_0/VN" "iout_mirror_0/Vcn" -36.9
+cap "iout_mirror_0/Iin" "iout_mirror_0/VN" -8.2
+cap "ladder_2_0/a_47800_0#" "iout_mirror_0/VN" 461.65
+cap "iout_mirror_0/Vcn" "iout_mirror_0/VN" -36.9
+cap "iout_mirror_0/a_400_1000#" "iout_mirror_0/VN" -36.9
+cap "ladder_2_0/vg" "iout_mirror_0/VN" 212.055
+cap "iout_mirror_0/a_400_1000#" "iout_mirror_0/VN" -3.395
+cap "iout_mirror_0/Iout" "iout_mirror_0/VN" -4.805
+cap "iout_mirror_0/a_400_1000#" "iout_mirror_0/VN" -36.9
+cap "iout_mirror_0/VN" "ladder_2_0/a_47800_0#" 501.03
+cap "iout_mirror_0/VN" "iout_mirror_0/net8" -8.2
+cap "iout_mirror_0/VN" "ladder_2_0/vg" 188.43
+cap "iout_mirror_0/Vcn" "iout_mirror_0/VN" -36.9
+cap "ladder_2_0/vg" "iout_mirror_0/VN" 174.83
+cap "iout_mirror_0/VN" "iout_mirror_0/a_400_1000#" -36.9
+cap "iout_mirror_0/Vcn" "iout_mirror_0/VN" -36.9
+cap "iout_mirror_0/net9" "iout_mirror_0/VN" -8.2
+cap "ladder_2_0/a_47800_0#" "iout_mirror_0/VN" 501.03
+cap "iout_mirror_0/Iout" "iout_mirror_0/VN" -3.395
+cap "iout_mirror_0/VN" "iout_mirror_0/a_400_1000#" -41.705
+cap "iout_mirror_0/VN" "ladder_2_0/vg" 188.43
+cap "ladder_2_0/a_47800_0#" "iout_mirror_0/VN" 501.03
+cap "iout_mirror_0/Iin" "iout_mirror_0/VN" -8.2
+cap "iout_mirror_0/VN" "iout_mirror_0/Vcn" -36.9
+cap "iout_mirror_0/VN" "a_64640_2180#" 860.64
+cap "ladder_2_0/vg" "iout_mirror_0/VN" 188.992
+cap "ladder_2_0/a_47800_0#" "iout_mirror_0/VN" 475.105
+cap "iout_mirror_0/VN" "iout_mirror_0/a_400_1000#" -3.395
+cap "iout_mirror_1/a_400_1000#" "iout_mirror_1/VN" -46.25
+cap "iout_mirror_1/VN" "iout_mirror_1/Iin" -8.2
+cap "iout_mirror_1/VN" "iout_mirror_1/Vcn" -36.9
+cap "iout_mirror_1/VN" "ladder_2_0/vg" 253.58
+cap "iout_mirror_1/net1" "iout_mirror_1/VN" -8.2
+cap "ladder_2_0/vg" "iout_mirror_1/VN" 267.18
+cap "iout_mirror_1/Vcn" "iout_mirror_1/VN" -34.05
+cap "iout_mirror_1/VN" "iout_mirror_1/a_400_1000#" -127.085
+cap "iout_mirror_1/VN" "iout_mirror_1/a_400_1000#" -36.9
+cap "iout_mirror_1/Vcn" "iout_mirror_1/VN" -131.085
+cap "iout_mirror_1/a_400_1000#" "iout_mirror_1/VN" -38.05
+cap "iout_mirror_1/VN" "iout_mirror_1/net3" -8.2
+cap "iout_mirror_1/Iout" "iout_mirror_1/VN" -8.2
+cap "ladder_2_0/vg" "iout_mirror_1/VN" 200.805
+cap "iout_mirror_1/Vcn" "iout_mirror_1/VN" -36.9
+cap "iout_mirror_1/VN" "ladder_2_0/a_57400_0#" 561.9
+cap "ladder_2_0/vg" "iout_mirror_1/VN" 188.43
+cap "iout_mirror_1/VN" "iout_mirror_1/a_400_1000#" -127.085
+cap "iout_mirror_1/Vcn" "iout_mirror_1/VN" -34.05
+cap "iout_mirror_1/Iin" "iout_mirror_1/VN" -8.2
+cap "iout_mirror_1/a_400_1000#" "iout_mirror_1/VN" -36.9
+cap "ladder_2_0/a_57400_0#" "iout_mirror_1/VN" 501.03
+cap "iout_mirror_1/VN" "iout_mirror_1/a_400_1000#" -38.05
+cap "iout_mirror_1/VN" "iout_mirror_1/Vcn" -131.085
+cap "iout_mirror_1/VN" "ladder_2_0/a_57400_0#" 501.03
+cap "iout_mirror_1/VN" "iout_mirror_1/Iin" -8.2
+cap "iout_mirror_1/VN" "ladder_2_0/vg" 174.83
+cap "iout_mirror_1/VN" "iout_mirror_1/Vcn" -36.9
+cap "iout_mirror_1/VN" "iout_mirror_1/a_400_1000#" -8.2
+cap "iout_mirror_1/VN" "iout_mirror_1/a_400_1000#" -127.085
+cap "iout_mirror_1/VN" "ladder_2_0/vg" 188.43
+cap "ladder_2_0/a_57400_0#" "iout_mirror_1/VN" 501.03
+cap "iout_mirror_1/VN" "iout_mirror_1/Vcn" -34.05
+cap "iout_mirror_1/VN" "iout_mirror_1/net4" -8.2
+cap "iout_mirror_1/a_400_1000#" "iout_mirror_1/VN" -36.9
+cap "iout_mirror_1/VN" "ladder_2_0/vg" 70.6725
+cap "iout_mirror_1/net5" "iout_mirror_1/VN" -8.2
+cap "iout_mirror_1/Iout" "iout_mirror_1/VN" -8.2
+cap "iout_mirror_1/VN" "ladder_2_0/a_57400_0#" 374.855
+cap "iout_mirror_1/VN" "iout_mirror_1/Vcn" -131.085
+cap "ladder_2_0/a_57400_0#" "a_64640_2180#" 3.92857
+cap "iout_mirror_1/VN" "iout_mirror_1/Vcn" -36.9
+cap "iout_mirror_1/VN" "iout_mirror_1/a_400_1000#" -38.05
+cap "ladder_2_0/vg" "iout_mirror_1/VN" 285.53
+cap "ladder_2_0/a_57400_0#" "a_64640_2180#" 3.92857
+cap "iout_mirror_1/VN" "iout_mirror_1/a_400_1000#" -127.085
+cap "ladder_2_0/vg" "a_64640_2180#" 129.6
+cap "iout_mirror_1/Vcn" "iout_mirror_1/VN" -34.05
+cap "iout_mirror_1/VN" "a_64640_2180#" -47.2
+cap "iout_mirror_1/VN" "iout_mirror_1/Iin" -8.2
+cap "iout_mirror_1/VN" "iout_mirror_1/a_400_1000#" -36.9
+cap "iout_mirror_1/Iin" "iout_mirror_1/VN" -8.2
+cap "iout_mirror_1/VN" "iout_mirror_1/a_400_1000#" -38.05
+cap "iout_mirror_1/VN" "iout_mirror_1/a_400_1000#" -8.2
+cap "iout_mirror_1/VN" "iout_mirror_1/Vcn" -131.085
+cap "iout_mirror_1/VN" "iout_mirror_1/Vcn" -36.9
+cap "iout_mirror_1/VN" "ladder_2_0/vg" 235.73
+cap "iout_mirror_1/a_400_1000#" "iout_mirror_1/VN" -127.085
+cap "iout_mirror_1/a_400_1000#" "iout_mirror_1/VN" -36.9
+cap "iout_mirror_1/Vcn" "iout_mirror_1/VN" -34.05
+cap "iout_mirror_1/net6" "iout_mirror_1/VN" -8.2
+cap "iout_mirror_1/VN" "ladder_2_0/vg" -29.745
+cap "iout_mirror_1/VN" "iout_mirror_1/Iout" -8.2
+cap "iout_mirror_1/Vcn" "iout_mirror_1/VN" -225.32
+cap "iout_mirror_1/VN" "iout_mirror_1/a_400_1000#" -38.05
+cap "iout_mirror_1/net7" "iout_mirror_1/VN" -8.2
+cap "iout_mirror_1/Vcn" "iout_mirror_1/VN" -36.9
+subcap "li_70620_4050#" -1971.4
+cap "iout_mirror_1/VN" "ladder_2_0/Idump" 1493.22
+cap "iout_mirror_1/VN" "iout_mirror_1/a_400_1000#" -221.32
+cap "cascode_generator_0/VP" "cascode_generator_0/Vbp" -67.5
+cap "cascode_generator_0/VP" "cascode_generator_0/Vbp" 5.68434e-14
+subcap "m2_53710_6490#" -887.372
+subcap "li_53710_6490#" -245.56
+subcap "m2_53710_6490#" -630.3
+subcap "li_54910_6530#" -1077.05
+cap "iout_mirror_0/Iout" "iout_mirror_0/Vcn" 225
+cap "iout_mirror_0/VN" "iout_mirror_0/Iin" 688.46
+cap "iout_mirror_0/Iin" "iout_mirror_0/Vcn" 269.76
+cap "iout_mirror_0/Iout" "iout_mirror_0/Vbp" 34.6154
+cap "iout_mirror_0/Iin" "iout_mirror_0/Iout" 177.76
+cap "iout_mirror_0/VP" "iout_mirror_0/Vbp" 2.84217e-14
+cap "iout_mirror_0/Vbp" "m2_53710_6490#" 185.34
+subcap "li_54910_6530#" -232.76
+cap "iout_mirror_1/Iout" "iout_mirror_1/Iin" 216.16
+cap "iout_mirror_1/Vbp" "iout_mirror_1/Iout" 146.94
+cap "iout_mirror_1/Iout" "iout_mirror_1/a_400_1000#" 5.68434e-14
+cap "iout_mirror_1/Iout" "iout_mirror_1/Iin" 269.76
+cap "iout_mirror_1/Vcn" "iout_mirror_1/Iin" 269.76
+cap "iout_mirror_1/Iin" "iout_mirror_1/a_16060_3220#" 2.27586
+cap "iout_mirror_1/VN" "iout_mirror_1/Iin" 662.82
+cap "iout_mirror_1/a_400_1000#" "iout_mirror_1/Iin" 269.76
+cap "iout_mirror_0/VP" "m2_53710_6490#" 1273.88
+cap "m2_53710_6490#" "iout_mirror_0/Vbp" 161.22
+cap "iout_mirror_0/Iout" "iout_mirror_0/Vbp" 12.8571
+cap "iout_mirror_1/Vbp" "iout_mirror_1/Iout" 161.22
+cap "iout_mirror_1/VP" "iout_mirror_1/Iout" 1273.88
+cap "iout_mirror_1/a_16060_3220#" "iout_mirror_1/Iin" 2.27586
+merge "iout_mirror_1/Vbp" "iout_mirror_0/Vbp" -163.845 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 50700 -960 0 0 0 0 0 0 0 0 0 0
+merge "iout_mirror_0/Vbp" "bias_current_0/vbp"
+merge "bias_current_0/vbp" "cascode_generator_0/Vbp"
+merge "iout_mirror_1/VN" "iout_mirror_0/VN" -60483.9 0 0 0 0 0 0 0 0 0 0 0 -2000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2320 -37776542 -289684 0 0 0 0 0 0 0 0 0 0
+merge "iout_mirror_0/VN" "cascode_generator_0/VN"
+merge "cascode_generator_0/VN" "bias_current_0/vn"
+merge "bias_current_0/vn" "ladder_2_0/vn"
+merge "ladder_2_0/vn" "VSUBS"
+merge "VSUBS" "m1_1870_3680#"
+merge "ladder_2_0/vg" "bias_current_0/vg" -2499.16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -129600 -540 0 0 0 0 35200 -320 -342800 -8480 0 0 0 0 0 0 0 0
+merge "bias_current_0/vg" "ladder_2_0/vp"
+merge "ladder_2_0/vp" "a_1420_4140#"
+merge "iout_mirror_0/Iin" "ladder_2_0/Iout" -2717.97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16000 -320 0 0 -217600 -5260 -180880 -1120 407600 -24860 0 0 0 0 0 0 0 0
+merge "ladder_2_0/Iout" "a_64640_2180#"
+merge "iout_mirror_1/Iin" "ladder_2_0/Idump" -1990.42 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -25600 -800 -461760 -920 -220800 -3080 0 0 0 0 0 0 0 0
+merge "ladder_2_0/Idump" "li_70620_4050#"
+merge "iout_mirror_1/Vcn" "iout_mirror_0/Vcn" -131.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -640 0 0 0 0 0 0 0 0 0 0
+merge "iout_mirror_0/Vcn" "cascode_generator_0/Vcn"
+merge "iout_mirror_1/VP" "iout_mirror_0/VP" -758.5 0 0 0 0 170250 -6740 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -101700 -5880 0 0 0 0 0 0 0 0 0 0
+merge "iout_mirror_0/VP" "bias_current_0/vp"
+merge "bias_current_0/vp" "cascode_generator_0/VP"
+merge "iout_mirror_1/Iout" "li_54910_6530#" -762.843 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -107790 -320 21600 0 0 0 0 0 0 0 0 0
+merge "ladder_2_0/Iin" "bias_current_0/iout" -1586.17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -123200 -320 0 0 -91100 -3180 0 0 0 0 0 0 0 0
+merge "bias_current_0/iout" "li_1700_4180#"
+merge "iout_mirror_0/Iout" "m1_53670_6490#" -98.945 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -51300 -320 0 0 0 0 0 0 0 0 0 0
