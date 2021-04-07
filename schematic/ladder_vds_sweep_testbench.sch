@@ -391,6 +391,7 @@ C {devices/lab_pin.sym} -710 -90 2 0 {name=l7 sig_type=std_logic lab=Vgate}
 C {madvlsi/ammeter1.sym} -740 -90 3 0 {name=VgateI}
 C {devices/code_shown.sym} 390 -410 0 0 {name=s1 only_toplevel=false value="
 .control
+.param vg=1.8
 set wr_vecnames
 set wr_singlescale
 save all
@@ -399,6 +400,6 @@ wrdata ~/Desktop/madvlsi/madvlsi_proj_4/data/vds_sweep.txt i(VloutI) i(VldumpI) 
 .endc
 "}
 C {madvlsi/gnd.sym} -620 -90 0 0 {name=l8 lab=GND}
-C {madvlsi/vsource.sym} -50 -150 0 0 {name=Vsweep1
+C {madvlsi/vsource.sym} -50 -150 0 0 {name=Vsweep
 value=.6}
 C {madvlsi/gnd.sym} -50 -120 0 0 {name=l20 lab=GND}

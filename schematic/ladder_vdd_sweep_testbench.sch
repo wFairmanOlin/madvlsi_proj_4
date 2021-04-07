@@ -53,7 +53,6 @@ N -230 -50 -230 -40 { lab=Vgate}
 N -330 -50 -330 -40 { lab=Vgate}
 N -430 -50 -430 -40 { lab=Vgate}
 N -530 -50 -530 -40 { lab=Vgate}
-N -760 -130 80 -130 { lab=Vin}
 N 80 -130 80 -90 { lab=Vin}
 N -760 -110 -540 -110 { lab=Vbp}
 N -540 -350 -540 -110 { lab=Vbp}
@@ -80,6 +79,8 @@ N 500 180 500 190 { lab=VldumpV}
 N 500 190 560 190 { lab=VldumpV}
 N -760 -90 -740 -90 { lab=#net14}
 N -730 -90 -710 -90 { lab=Vgate}
+N -760 -130 -620 -130 { lab=Vin}
+N -620 -130 80 -130 { lab=Vin}
 C {madvlsi/gnd.sym} 260 140 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 170 -30 0 0 {name=l25 sig_type=std_logic lab=D0}
 C {devices/lab_pin.sym} 170 -10 0 0 {name=l26 sig_type=std_logic lab=D1}
@@ -361,7 +362,7 @@ C {madvlsi/gnd.sym} -420 -440 0 0 {name=l18 lab=GND}
 C {madvlsi/vdd.sym} -420 -570 0 0 {name=l19 lab=VDD}
 C {devices/lab_pin.sym} -200 -480 2 0 {name=l21 sig_type=std_logic lab=Vcn}
 C {devices/lab_pin.sym} -540 -260 2 0 {name=l23 sig_type=std_logic lab=Vbp}
-C {madvlsi/vsource.sym} 880 -30 3 0 {name=Vsweep
+C {madvlsi/vsource.sym} 880 -30 3 0 {name=V7
 value=.6}
 C {devices/lab_pin.sym} 420 -70 1 0 {name=l54 sig_type=std_logic lab=VloutV}
 C {devices/lab_pin.sym} 420 50 1 0 {name=l55 sig_type=std_logic lab=VldumpV}
@@ -392,7 +393,7 @@ C {devices/code_shown.sym} 390 -410 0 0 {name=s1 only_toplevel=false value="
 set wr_vecnames
 set wr_singlescale
 save all
-dc Vsweep 0 1.8 .001
-wrdata ~/Desktop/madvlsi/madvlsi_proj_4/data/vout_sweep.txt i(VloutI) i(VldumpI) v(Vin) v(Vgate) v(D0) i(VinI) i(VgateI) v(VloutV) v(VldumpV) i(Vout) i(Vdump)
+dc Vdd .5 1.8 .001
+wrdata ~/Desktop/madvlsi/madvlsi_proj_4/data/vdd_sweep.txt i(VloutI) i(VldumpI) v(Vin) v(Vgate) v(D0) i(VinI) i(VgateI) v(VloutV) v(VldumpV) i(Vout) i(Vdump)
 .endc
 "}
