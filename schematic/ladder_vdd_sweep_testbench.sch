@@ -53,7 +53,6 @@ N -230 -50 -230 -40 { lab=Vgate}
 N -330 -50 -330 -40 { lab=Vgate}
 N -430 -50 -430 -40 { lab=Vgate}
 N -530 -50 -530 -40 { lab=Vgate}
-N -760 -130 80 -130 { lab=Vin}
 N 80 -130 80 -90 { lab=Vin}
 N -760 -110 -540 -110 { lab=Vbp}
 N -540 -350 -540 -110 { lab=Vbp}
@@ -80,6 +79,8 @@ N 500 180 500 190 { lab=VldumpV}
 N 500 190 560 190 { lab=VldumpV}
 N -760 -90 -740 -90 { lab=#net14}
 N -730 -90 -710 -90 { lab=Vgate}
+N -760 -130 -620 -130 { lab=Vin}
+N -620 -130 80 -130 { lab=Vin}
 C {madvlsi/gnd.sym} 260 140 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 170 -30 0 0 {name=l25 sig_type=std_logic lab=D0}
 C {devices/lab_pin.sym} 170 -10 0 0 {name=l26 sig_type=std_logic lab=D1}
@@ -109,74 +110,6 @@ C {devices/lab_pin.sym} -430 30 2 0 {name=l37 sig_type=std_logic lab=D2}
 C {devices/lab_pin.sym} -330 30 2 0 {name=l39 sig_type=std_logic lab=D3}
 C {devices/lab_pin.sym} -230 30 2 0 {name=l41 sig_type=std_logic lab=D4}
 C {devices/lab_pin.sym} -130 30 2 0 {name=l43 sig_type=std_logic lab=D5}
-C {devices/code.sym} 30 -340 0 0 {name=SPICE only_toplevel=false value="
-.param vg = 1.8
-.control
-  set wr_singlescale
-  let runs = 1
-  let run = 1
-  while run <= runs
-    set appendwrite = False
-    set wr_vecnames
-    let code = 0
-    while code < 128
-      if code eq 0
-        let b0 = 0
-      else
-        let b0 = code % 2
-      end
-      if floor(code / 2) eq 0
-        let b1 = 0
-      else
-        let b1 = floor(code / 2) % 2
-      end
-      if floor(code / 4) eq 0
-        let b2 = 0
-      else
-        let b2 = floor(code / 4) % 2
-      end
-      if floor(code / 8) eq 0
-        let b3 = 0
-      else
-        let b3 = floor(code / 8) % 2
-      end
-      if floor(code / 16) eq 0
-        let b4 = 0
-      else
-        let b4 = floor(code / 16) % 2
-      end
-      if floor(code / 32) eq 0
-        let b5 = 0
-      else
-        let b5 = floor(code / 32) % 2
-      end
-      if floor(code / 64) eq 0
-        let b6 = 0
-      else
-        let b6 = floor(code / 64) % 2
-      end
-      alter V0 $&b0
-      alter V1 $&b1
-      alter V2 $&b2
-      alter V3 $&b3
-      alter V4 $&b4
-      alter V5 $&b5
-      alter V6 $&b6
-      save all
-      op
-      wrdata ~/Documents/madvlsi_proj_4/data/mc_dac\{$&run\}.txt i(VloutI) i(VldumpI) v(Vin) v(Vgate) v(D0) i(VinI) i(VgateI) v(VloutV) v(VldumpV) i(Vout) i(Vdump)
-      if code eq 0
-        set appendwrite
-        set wr_vecnames = FALSE
-      end
-      let code = code + 1
-    end
-    reset
-    let run = run + 1
-  end
-
-.endc"
-}
 C {madvlsi/tt_models.sym} 190 -330 0 0 {
 name=TT_MODELS
 only_toplevel=false
@@ -454,3 +387,13 @@ C {devices/lab_pin.sym} -30 -50 2 0 {name=l4 sig_type=std_logic lab=Vgate}
 C {bias_current_LDS.sym} -770 0 0 0 {name=X2}
 C {devices/lab_pin.sym} -710 -90 2 0 {name=l7 sig_type=std_logic lab=Vgate}
 C {madvlsi/ammeter1.sym} -740 -90 3 0 {name=VgateI}
+C {devices/code_shown.sym} 390 -410 0 0 {name=s1 only_toplevel=false value="
+.control
+.param vg=1.8
+set wr_vecnames
+set wr_singlescale
+save all
+dc Vdd .5 1.8 .001
+wrdata ~/Desktop/madvlsi/madvlsi_proj_4/data/vdd_sweep.txt i(VloutI) i(VldumpI) v(Vin) v(Vgate) v(D0) i(VinI) i(VgateI) v(VloutV) v(VldumpV) i(Vout) i(Vdump)
+.endc
+"}

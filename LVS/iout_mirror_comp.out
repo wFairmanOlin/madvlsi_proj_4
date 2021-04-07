@@ -1,0 +1,20 @@
+Equate elements:  no current cell.
+Equate elements:  no current cell.
+Class iout_mirror.spice:  Merged 16 devices.
+Class iout_mirror_LDS.spice:  Merged 16 devices.
+
+Subcircuit summary:
+Circuit 1: iout_mirror.spice               |Circuit 2: iout_mirror_LDS.spice           
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (33)               |sky130_fd_pr__pfet_01v8 (33)               
+sky130_fd_pr__nfet_01v8 (19)               |sky130_fd_pr__nfet_01v8 (19)               
+Number of devices: 52                      |Number of devices: 52                      
+Number of nets: 43                         |Number of nets: 43                         
+---------------------------------------------------------------------------------------
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match uniquely.
+Circuits match correctly.
+Cells have no pins;  pin matching not needed.
+Device classes iout_mirror.spice and iout_mirror_LDS.spice are equivalent.
+Circuits match uniquely.

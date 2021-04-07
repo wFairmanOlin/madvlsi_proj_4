@@ -1,0 +1,35 @@
+* SPICE3 file created from cascode_generator.ext - technology: sky130A
+
+
+* Top level circuit cascode_generator
+
+X0 a_1220_3790# w_380_3510# w_380_3510# w_380_3510# sky130_fd_pr__pfet_01v8 ad=1e+13p pd=2.4e+07u as=3e+13p ps=7.2e+07u w=5e+06u l=2e+06u
+X1 a_620_1570# a_1220_3790# a_2020_1570# a_620_1570# sky130_fd_pr__nfet_01v8 ad=2e+13p pd=4.8e+07u as=3e+13p ps=7.2e+07u w=5e+06u l=2e+06u
+X2 a_2020_1570# a_1220_3790# a_620_1570# a_620_1570# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X3 w_380_3510# a_1420_3570# a_1420_1570# w_380_3510# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=5e+12p ps=1.2e+07u w=5e+06u l=2e+06u
+X4 a_6820_3790# a_1420_3570# w_380_3510# w_380_3510# sky130_fd_pr__pfet_01v8 ad=5e+12p pd=1.2e+07u as=0p ps=0u w=5e+06u l=2e+06u
+X5 a_1420_1570# a_1420_1570# a_2020_1570# a_620_1570# sky130_fd_pr__nfet_01v8 ad=1e+13p pd=2.4e+07u as=0p ps=0u w=5e+06u l=2e+06u
+X6 a_1220_3790# a_1220_3790# a_2020_1570# a_620_1570# sky130_fd_pr__nfet_01v8 ad=2e+13p pd=4.8e+07u as=0p ps=0u w=5e+06u l=2e+06u
+X7 a_3620_3790# a_1420_3570# a_3020_3790# w_380_3510# sky130_fd_pr__pfet_01v8 ad=5e+12p pd=1.2e+07u as=5e+12p ps=1.2e+07u w=5e+06u l=2e+06u
+X8 w_380_3510# w_380_3510# a_1220_3790# w_380_3510# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X9 a_1220_3790# a_1220_3790# a_2020_1570# a_620_1570# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X10 a_1220_3790# a_1220_3790# a_2020_1570# a_620_1570# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X11 a_2420_3790# a_1420_3570# net6 w_380_3510# sky130_fd_pr__pfet_01v8 ad=5e+12p pd=1.2e+07u as=5e+12p ps=1.2e+07u w=5e+06u l=2e+06u
+X12 w_380_3510# a_1420_3570# a_3620_3790# w_380_3510# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X13 a_8620_3790# a_1420_3570# a_8020_3790# w_380_3510# sky130_fd_pr__pfet_01v8 ad=5e+12p pd=1.2e+07u as=5e+12p ps=1.2e+07u w=5e+06u l=2e+06u
+X14 a_1420_1570# a_1420_3570# w_380_3510# w_380_3510# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X15 a_1420_1570# a_620_1570# a_620_1570# a_620_1570# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X16 a_1220_3790# a_1220_3790# a_2020_1570# a_620_1570# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X17 a_2020_1570# a_1220_3790# a_1220_3790# a_620_1570# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X18 a_3020_3790# a_1420_3570# a_2420_3790# w_380_3510# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X19 a_7420_3790# a_1420_3570# a_6820_3790# w_380_3510# sky130_fd_pr__pfet_01v8 ad=5e+12p pd=1.2e+07u as=0p ps=0u w=5e+06u l=2e+06u
+X20 a_1220_3790# a_1420_3570# a_8620_3790# w_380_3510# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X21 a_620_1570# a_620_1570# a_1420_1570# a_620_1570# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X22 a_2020_1570# a_1220_3790# a_1220_3790# a_620_1570# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X23 a_2020_1570# a_1420_1570# a_1420_1570# a_620_1570# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X24 a_2020_1570# a_1220_3790# a_1220_3790# a_620_1570# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X25 net6 a_1420_3570# a_1220_3790# w_380_3510# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X26 a_8020_3790# a_1420_3570# a_7420_3790# w_380_3510# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+X27 a_2020_1570# a_1220_3790# a_1220_3790# a_620_1570# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u
+.end
+
