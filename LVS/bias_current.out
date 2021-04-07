@@ -1,0 +1,18 @@
+Equate elements:  no current cell.
+Equate elements:  no current cell.
+Class bias_current_Layout.spice:  Merged 51 devices.
+Class bias_current_LDS.spice:  Merged 51 devices.
+
+Subcircuit summary:
+Circuit 1: bias_current_Layout.spice       |Circuit 2: bias_current_LDS.spice          
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (15)               |sky130_fd_pr__pfet_01v8 (15)               
+sky130_fd_pr__nfet_01v8 (10)               |sky130_fd_pr__nfet_01v8 (10)               
+Number of devices: 25                      |Number of devices: 25                      
+Number of nets: 10                         |Number of nets: 10                         
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes bias_current_Layout.spice and bias_current_LDS.spice are equivalent.
+Circuits match uniquely.
